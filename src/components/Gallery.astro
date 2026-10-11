@@ -1,0 +1,209 @@
+---
+import { getImage, Image } from "astro:assets";
+import { resolvePhoto } from "../lib/photos";
+import { t, type Locale } from "../lib/i18n";
+import type { SiteContent } from "../lib/content";
+
+interface Props {
+  locale: Locale;
+  photos: SiteContent["photos"];
+  ui: SiteContent["ui"];
+  masonry?: boolean;
+}
+const { locale, photos, ui, masonry = true } = Astro.props;
+const strings = ui as {
+  categories: Record<string, { en: string; he: string }>;
+  gallery: {
+    filterLabel: { en: string; he: string };
+    open: { en: string; he: string };
+    previous: { en: string; he: string };
+    next: { en: string; he: string };
+    dialog: { en: string; he: string };
+    count: { en: string; he: string };
+    of: { en: string; he: string };
+  };
+  photoUnlabeled: { en: string; he: string };
+};
+
+const prepared = await Promise.all(
+  [...photos]
+    .sort((a, b) => a.order - b.order)
+    .map(async (photo) => {
+      const src = resolvePhoto(photo.file);
+      const full = await getImage({
+        src,
+        width: Math.min(src.width, 1600),
+        format: "webp",
+        quality: 78,
+      });
+      return { ...photo, src, full: full.src };
+    }),
+);
+
+const categories = ["all", ...new Set(prepared.map((photo) => photo.category))];
+const galleryId = `gallery-${masonry ? "full" : "feature"}`;
+---
+
+{
+  masonry && (
+    <div class="mb-6 flex flex-wrap gap-2" role="group" aria-label={t(locale, strings.gallery.filterLabel)}>
+      {categories.map((category, index) => (
+        <button
+          type="button"
+          class="filter-btn border border-line px-3 py-1.5 text-sm data-[active=true]:border-pine data-[active=true]:bg-pine data-[active=true]:text-paper"
+          data-gallery={galleryId}
+          data-filter={category}
+          data-active={index === 0 ? "true" : "false"}
+          aria-pressed={index === 0 ? "true" : "false"}
+        >
+          {t(locale, strings.categories[category])}
+        </button>
+      ))}
+    </div>
+  )
+}
+
+<div class:list={[masonry ? "masonry" : "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"]} id={galleryId}>
+  {
+    prepared.map((photo, index) => (
+      <article data-cat={photo.category}>
+        <button
+          type="button"
+          class="group block w-full text-start"
+          data-lightbox={galleryId}
+          data-index={index}
+          data-full={photo.full}
+          data-caption={t(locale, photo.caption)}
+          data-track="gallery_open"
+          data-track-detail={photo.id}
+        >
+          <Image
+            src={photo.src}
+            alt={t(locale, photo.alt)}
+            widths={[480, 768, 1200]}
+            sizes={masonry ? "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" : "(min-width: 1024px) 33vw, 100vw"}
+            class="h-auto w-full bg-stone object-cover transition duration-500 group-hover:opacity-95"
+            loading={index < 2 && !masonry ? "eager" : "lazy"}
+          />
+          <span class="sr-only">{t(locale, strings.gallery.open)}</span>
+        </button>
+        <p class="mt-2 text-sm leading-snug text-char">{t(locale, photo.caption)}</p>
+        {photo.labelUnverified && <p class="mt-1 text-xs text-clay">{t(locale, strings.photoUnlabeled)}</p>}
+      </article>
+    ))
+  }
+</div>
+
+<dialog id={`${galleryId}-dialog`} aria-label={t(locale, strings.gallery.dialog)}>
+  <div class="flex items-center justify-between gap-3 px-3 py-2">
+    <p class="text-sm" data-count></p>
+    <button type="button" class="px-3 py-2 text-sm" data-close>
+      {t(locale, (ui as { close: { en: string; he: string } }).close)}
+    </button>
+  </div>
+  <img alt="" data-photo />
+  <div class="flex items-center justify-between gap-3 px-3 py-3">
+    <button type="button" class="border border-paper/30 px-3 py-2 text-sm" data-prev>
+      {t(locale, strings.gallery.previous)}
+    </button>
+    <p class="max-w-xl text-sm leading-snug" data-caption></p>
+    <button type="button" class="border border-paper/30 px-3 py-2 text-sm" data-next>
+      {t(locale, strings.gallery.next)}
+    </button>
+  </div>
+</dialog>
+
+<script>
+  const galleries = document.querySelectorAll("[data-lightbox]");
+  const groups = new Map<string, HTMLButtonElement[]>();
+  galleries.forEach((node) => {
+    if (!(node instanceof HTMLButtonElement)) return;
+    const id = node.dataset.lightbox || "";
+    const list = groups.get(id) || [];
+    list.push(node);
+    groups.set(id, list);
+  });
+
+  groups.forEach((buttons, id) => {
+    const dialog = document.getElementById(`${id}-dialog`);
+    if (!(dialog instanceof HTMLDialogElement)) return;
+    const photo = dialog.querySelector("[data-photo]");
+    const caption = dialog.querySelector("[data-caption]");
+    const count = dialog.querySelector("[data-count]");
+    if (!(photo instanceof HTMLImageElement) || !(caption instanceof HTMLElement) || !(count instanceof HTMLElement)) return;
+    let index = 0;
+    let origin: HTMLElement | null = null;
+
+    const show = (next: number) => {
+      index = (next + buttons.length) % buttons.length;
+      const button = buttons[index];
+      photo.src = button.dataset.full || "";
+      photo.alt = button.dataset.caption || "";
+      caption.textContent = button.dataset.caption || "";
+      count.textContent = `${index + 1} / ${buttons.length}`;
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        origin = button;
+        show(Number(button.dataset.index || 0));
+        dialog.showModal();
+      });
+    });
+
+    dialog.querySelector("[data-close]")?.addEventListener("click", () => dialog.close());
+    dialog.querySelector("[data-prev]")?.addEventListener("click", () => show(index - 1));
+    dialog.querySelector("[data-next]")?.addEventListener("click", () => show(index + 1));
+    dialog.addEventListener("close", () => origin?.focus());
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+    dialog.addEventListener("keydown", (event) => {
+      const rtl = document.documentElement.dir === "rtl";
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") event.preventDefault();
+      if (event.key === "ArrowRight") show(rtl ? index - 1 : index + 1);
+      if (event.key === "ArrowLeft") show(rtl ? index + 1 : index - 1);
+    });
+
+    let startX = 0;
+    dialog.addEventListener(
+      "touchstart",
+      (event) => {
+        startX = event.changedTouches[0]?.clientX || 0;
+      },
+      { passive: true },
+    );
+    dialog.addEventListener(
+      "touchend",
+      (event) => {
+        const endX = event.changedTouches[0]?.clientX || 0;
+        const delta = endX - startX;
+        if (Math.abs(delta) < 40) return;
+        const rtl = document.documentElement.dir === "rtl";
+        if (delta < 0) show(rtl ? index - 1 : index + 1);
+        else show(rtl ? index + 1 : index - 1);
+      },
+      { passive: true },
+    );
+  });
+
+  document.querySelectorAll(".filter-btn").forEach((node) => {
+    node.addEventListener("click", () => {
+      if (!(node instanceof HTMLButtonElement)) return;
+      const id = node.dataset.gallery;
+      const filter = node.dataset.filter;
+      const root = id ? document.getElementById(id) : null;
+      if (!root || !filter) return;
+      root.querySelectorAll("[data-cat]").forEach((item) => {
+        if (!(item instanceof HTMLElement)) return;
+        item.hidden = filter !== "all" && item.dataset.cat !== filter;
+      });
+      document.querySelectorAll(`.filter-btn[data-gallery="${id}"]`).forEach((button) => {
+        if (!(button instanceof HTMLButtonElement)) return;
+        const active = button === node;
+        button.dataset.active = active ? "true" : "false";
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+    });
+  });
+</script>

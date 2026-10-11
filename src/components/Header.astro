@@ -1,0 +1,97 @@
+---
+import BookingLink from "./BookingLink.astro";
+import StoneMark from "./StoneMark.astro";
+import type { SiteContent } from "../lib/content";
+import { getLocale, localePath, otherLocale, pages, t, type Locale, type PageId } from "../lib/i18n";
+
+interface Props {
+  locale: Locale;
+  page: PageId;
+  content: SiteContent;
+}
+const { locale, page, content } = Astro.props;
+const { settings, ui } = content;
+const strings = ui as {
+  navLabel: { en: string; he: string };
+  menu: { en: string; he: string };
+  languageLabel: { en: string; he: string };
+  nav: Record<PageId, { en: string; he: string }>;
+};
+const alt = getLocale(otherLocale(locale));
+const altHref = localePath(alt.code, page);
+---
+
+<header class="sticky top-0 z-40 border-b border-line/80 bg-paper/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 md:px-6">
+    <a href={localePath(locale, "home")} class="flex items-center gap-3 text-pine">
+      <StoneMark />
+      <span class="font-serif text-2xl leading-none font-medium tracking-tight">{t(locale, settings.brandName)}</span>
+    </a>
+
+    <nav class="ms-auto hidden items-center gap-5 lg:flex" aria-label={t(locale, strings.navLabel)}>
+      {
+        pages
+          .filter((item) => item !== "home")
+          .map((item) => (
+            <a
+              href={localePath(locale, item)}
+              class:list={[
+                "text-sm text-char hover:text-pine",
+                page === item && "text-pine underline decoration-clay decoration-2 underline-offset-8",
+              ]}
+              aria-current={page === item ? "page" : undefined}
+            >
+              {t(locale, strings.nav[item])}
+            </a>
+          ))
+      }
+    </nav>
+
+    <div class="ms-auto flex items-center gap-2 lg:ms-4">
+      <a
+        href={altHref}
+        hreflang={alt.htmlLang}
+        lang={alt.htmlLang}
+        class="border border-line px-2.5 py-1.5 text-xs font-semibold tracking-wide text-char hover:border-pine hover:text-pine"
+        data-track="language_switch"
+        data-track-detail={alt.code}
+        aria-label={`${t(locale, strings.languageLabel)}: ${alt.label}`}
+      >
+        {alt.shortLabel}
+      </a>
+      <BookingLink
+        locale={locale}
+        settings={settings}
+        ui={ui}
+        placement="nav"
+        intent="availability"
+        class="hidden lg:inline-flex"
+      />
+      <details class="relative lg:hidden">
+        <summary class="cursor-pointer border border-line px-3 py-2 text-sm font-semibold text-pine">
+          {t(locale, strings.menu)}
+        </summary>
+        <nav
+          class="absolute end-0 z-50 mt-2 w-56 border border-line bg-paper p-3 shadow-lg"
+          aria-label={t(locale, strings.navLabel)}
+        >
+          <ul class="grid gap-1">
+            {
+              pages.map((item) => (
+                <li>
+                  <a
+                    href={localePath(locale, item)}
+                    class="block px-2 py-2 text-sm hover:bg-cream"
+                    aria-current={page === item ? "page" : undefined}
+                  >
+                    {t(locale, strings.nav[item])}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

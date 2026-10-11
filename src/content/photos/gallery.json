@@ -1,0 +1,388 @@
+{
+  "items": [
+    {
+      "id": "balcony",
+      "file": "15-balcony.jpg",
+      "category": "outdoor",
+      "order": 10,
+      "featured": true,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Balcony with a table and chairs, looking toward hills and neighboring houses.",
+        "he": "מרפסת עם שולחן וכיסאות, הפונה לגבעות ולבתי השכנים."
+      },
+      "caption": {
+        "en": "Balcony with a table and chairs, looking toward hills and neighboring houses.",
+        "he": "מרפסת עם שולחן וכיסאות, הפונה לגבעות ולבתי השכנים."
+      }
+    },
+    {
+      "id": "living",
+      "file": "10-living.jpg",
+      "category": "living",
+      "order": 20,
+      "featured": true,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Living room with an L-shaped sofa, bookshelves, and a door toward the balcony.",
+        "he": "סלון עם ספה בצורת ר, ספריות ודלת לכיוון המרפסת."
+      },
+      "caption": {
+        "en": "Living room with an L-shaped sofa, bookshelves, and a door toward the balcony.",
+        "he": "סלון עם ספה בצורת ר, ספריות ודלת לכיוון המרפסת."
+      }
+    },
+    {
+      "id": "dining",
+      "file": "14-dining.jpg",
+      "category": "dining",
+      "order": 30,
+      "featured": true,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Dining table with chairs and a wooden sideboard.",
+        "he": "שולחן אוכל עם כיסאות ומזנון עץ."
+      },
+      "caption": {
+        "en": "Dining table with chairs and a wooden sideboard.",
+        "he": "שולחן אוכל עם כיסאות ומזנון עץ."
+      }
+    },
+    {
+      "id": "kitchen",
+      "file": "01-kitchen.jpg",
+      "category": "kitchen",
+      "order": 40,
+      "featured": true,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Kitchen with a breakfast bar, blue-grey lower cabinets, and pendant lights.",
+        "he": "מטבח עם דלפק, ארונות תחתונים בכחול-אפור וגופי תאורה תלויים."
+      },
+      "caption": {
+        "en": "Kitchen with a breakfast bar, blue-grey lower cabinets, and pendant lights.",
+        "he": "מטבח עם דלפק, ארונות תחתונים בכחול-אפור וגופי תאורה תלויים."
+      }
+    },
+    {
+      "id": "pool",
+      "file": "04-pool.jpg",
+      "category": "outdoor",
+      "order": 50,
+      "featured": true,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Side yard with a seasonal above-ground pool and decking.",
+        "he": "חצר צדדית עם בריכה עונתית מעל הקרקע ומשטח דק."
+      },
+      "caption": {
+        "en": "Side yard with a seasonal above-ground pool and decking. The listing says the pool is available May through August.",
+        "he": "חצר צדדית עם בריכה עונתית מעל הקרקע ומשטח דק. לפי הרשימה הבריכה זמינה ממאי עד אוגוסט."
+      }
+    },
+    {
+      "id": "entry-stair",
+      "file": "02-entry-stair.jpg",
+      "category": "entry",
+      "order": 60,
+      "featured": true,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Entry stair beside a stone feature wall, with a plant.",
+        "he": "מדרגות בכניסה ליד קיר אבן דקורטיבי, עם עציץ."
+      },
+      "caption": {
+        "en": "Entry stair beside a stone feature wall, with a plant.",
+        "he": "מדרגות בכניסה ליד קיר אבן דקורטיבי, עם עציץ."
+      }
+    },
+    {
+      "id": "entry-console",
+      "file": "05-entry-console.jpg",
+      "category": "entry",
+      "order": 70,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Entry console and an arched mirror against a stone wall.",
+        "he": "קונסולה בכניסה ומראה קשתית על קיר אבן."
+      },
+      "caption": {
+        "en": "Entry console and an arched mirror against a stone wall.",
+        "he": "קונסולה בכניסה ומראה קשתית על קיר אבן."
+      }
+    },
+    {
+      "id": "sofa-room",
+      "file": "07-sofa-room.jpg",
+      "category": "bedroom",
+      "order": 80,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Room with a grey sofa bed, wall art, and a split air conditioner.",
+        "he": "חדר עם ספת מיטה אפורה, תמונות על הקיר ומזגן מפוצל."
+      },
+      "caption": {
+        "en": "Room with a grey sofa bed, wall art, and a split air conditioner. Not matched to a numbered bedroom.",
+        "he": "חדר עם ספת מיטה אפורה, תמונות על הקיר ומזגן מפוצל. לא שויך לחדר ממוספר."
+      }
+    },
+    {
+      "id": "bedroom-double",
+      "file": "03-bedroom-double.jpg",
+      "category": "bedroom",
+      "order": 90,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bedroom with a double bed and striped cushions.",
+        "he": "חדר שינה עם מיטה זוגית וכריות פסים."
+      },
+      "caption": {
+        "en": "Bedroom with a double bed and striped cushions.",
+        "he": "חדר שינה עם מיטה זוגית וכריות פסים."
+      }
+    },
+    {
+      "id": "bedroom-white",
+      "file": "16-bedroom-white.jpg",
+      "category": "bedroom",
+      "order": 100,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bedroom with a double bed, white linens, and a wall-mounted air conditioner.",
+        "he": "חדר שינה עם מיטה זוגית, מצעים לבנים ומזגן על הקיר."
+      },
+      "caption": {
+        "en": "Bedroom with a double bed, white linens, and a wall-mounted air conditioner.",
+        "he": "חדר שינה עם מיטה זוגית, מצעים לבנים ומזגן על הקיר."
+      }
+    },
+    {
+      "id": "bedroom-blue",
+      "file": "17-bedroom-blue.jpg",
+      "category": "bedroom",
+      "order": 110,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bedroom with a double bed, blue-grey bedding, and a pendant light.",
+        "he": "חדר שינה עם מיטה זוגית, מצעים בכחול-אפור וגוף תאורה תלוי."
+      },
+      "caption": {
+        "en": "Bedroom with a double bed, blue-grey bedding, and a pendant light.",
+        "he": "חדר שינה עם מיטה זוגית, מצעים בכחול-אפור וגוף תאורה תלוי."
+      }
+    },
+    {
+      "id": "bedroom-single-yellow",
+      "file": "08-bedroom-single-yellow.jpg",
+      "category": "bedroom",
+      "order": 120,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bedroom with a single bed and yellow bedding. A stationary exercise bike is in the room.",
+        "he": "חדר שינה עם מיטת יחיד ומצעים צהובים. בחדר נראה אופני כושר."
+      },
+      "caption": {
+        "en": "Bedroom with a single bed and yellow bedding. A stationary exercise bike is visible. The amenity list names a treadmill; this photo is unlabeled, so the bike is not matched to that line.",
+        "he": "חדר שינה עם מיטת יחיד ומצעים צהובים. בחדר נראים אופני כושר. ברשימת המתקנים מופיע הליכון; לתמונה אין כיתוב, ולכן האופניים לא שויכו לשורה הזו."
+      }
+    },
+    {
+      "id": "bedroom-single-bench",
+      "file": "09-bedroom-single-bench.jpg",
+      "category": "bedroom",
+      "order": 130,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bedroom with a single bed and a low bench.",
+        "he": "חדר שינה עם מיטת יחיד וספסל נמוך."
+      },
+      "caption": {
+        "en": "Bedroom with a single bed and a low bench.",
+        "he": "חדר שינה עם מיטת יחיד וספסל נמוך."
+      }
+    },
+    {
+      "id": "bedroom-grey",
+      "file": "18-bedroom-grey.jpg",
+      "category": "bedroom",
+      "order": 140,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bedroom with a single bed, grey bedding, and a yellow pillow.",
+        "he": "חדר שינה עם מיטת יחיד, מצעים אפורים וכרית צהובה."
+      },
+      "caption": {
+        "en": "Bedroom with a single bed, grey bedding, and a yellow pillow.",
+        "he": "חדר שינה עם מיטת יחיד, מצעים אפורים וכרית צהובה."
+      }
+    },
+    {
+      "id": "bedroom-window",
+      "file": "19-bedroom-window.jpg",
+      "category": "bedroom",
+      "order": 150,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bedroom with a single bed beside a window and a wall-mounted air conditioner.",
+        "he": "חדר שינה עם מיטת יחיד ליד חלון ומזגן על הקיר."
+      },
+      "caption": {
+        "en": "Bedroom with a single bed beside a window and a wall-mounted air conditioner.",
+        "he": "חדר שינה עם מיטת יחיד ליד חלון ומזגן על הקיר."
+      }
+    },
+    {
+      "id": "bedroom-raised",
+      "file": "22-bedroom-raised.jpg",
+      "category": "bedroom",
+      "order": 160,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bedroom with a raised bed frame. The listing does not name a bunk or loft.",
+        "he": "חדר שינה עם מסגרת מיטה מוגבהת. הרשימה אינה מציינת מיטת קומתיים או לופט."
+      },
+      "caption": {
+        "en": "Bedroom with a raised bed frame. The listing does not publish a bunk or loft, so this photo is not matched to a bed configuration.",
+        "he": "חדר שינה עם מסגרת מיטה מוגבהת. הרשימה אינה מפרסמת מיטת קומתיים או לופט, ולכן התמונה לא שויכה לסידור מיטות."
+      }
+    },
+    {
+      "id": "bedroom-blue-wall",
+      "file": "23-bedroom-blue-wall.jpg",
+      "category": "bedroom",
+      "order": 170,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bedroom with a single bed against a blue wall, and a plant.",
+        "he": "חדר שינה עם מיטת יחיד על קיר כחול, ועציץ."
+      },
+      "caption": {
+        "en": "Bedroom with a single bed against a blue wall, and a plant.",
+        "he": "חדר שינה עם מיטת יחיד על קיר כחול, ועציץ."
+      }
+    },
+    {
+      "id": "bedroom-two-windows",
+      "file": "24-bedroom-two-windows.jpg",
+      "category": "bedroom",
+      "order": 180,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bedroom with a single bed between two windows.",
+        "he": "חדר שינה עם מיטת יחיד בין שני חלונות."
+      },
+      "caption": {
+        "en": "Bedroom with a single bed between two windows.",
+        "he": "חדר שינה עם מיטת יחיד בין שני חלונות."
+      }
+    },
+    {
+      "id": "bath-tub",
+      "file": "11-bath-tub.jpg",
+      "category": "bathroom",
+      "order": 190,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bathroom with a bathtub, a wood-slat vanity, and patterned tile.",
+        "he": "חדר רחצה עם אמבטיה, ארון כיור בחיפוי עץ ואריחים מעוטרים."
+      },
+      "caption": {
+        "en": "Bathroom with a bathtub, a wood-slat vanity, and patterned tile.",
+        "he": "חדר רחצה עם אמבטיה, ארון כיור בחיפוי עץ ואריחים מעוטרים."
+      }
+    },
+    {
+      "id": "bath-shower",
+      "file": "12-bath-shower.jpg",
+      "category": "bathroom",
+      "order": 200,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bathroom with a glass shower, a blue vanity, and gold-colored fixtures.",
+        "he": "חדר רחצה עם מקלחון זכוכית, ארון כיור כחול וברזים בגוון זהב."
+      },
+      "caption": {
+        "en": "Bathroom with a glass shower, a blue vanity, and gold-colored fixtures.",
+        "he": "חדר רחצה עם מקלחון זכוכית, ארון כיור כחול וברזים בגוון זהב."
+      }
+    },
+    {
+      "id": "bath-vanity",
+      "file": "20-bath-vanity.jpg",
+      "category": "bathroom",
+      "order": 210,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bathroom with a toilet, a small vanity, and a plant.",
+        "he": "חדר רחצה עם אסלה, ארון כיור קטן ועציץ."
+      },
+      "caption": {
+        "en": "Bathroom with a toilet, a small vanity, and a plant.",
+        "he": "חדר רחצה עם אסלה, ארון כיור קטן ועציץ."
+      }
+    },
+    {
+      "id": "bath-shower-blue",
+      "file": "21-bath-shower-blue.jpg",
+      "category": "bathroom",
+      "order": 220,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Bathroom with a glass shower and a blue vanity.",
+        "he": "חדר רחצה עם מקלחון זכוכית וארון כיור כחול."
+      },
+      "caption": {
+        "en": "Bathroom with a glass shower and a blue vanity. It may be another angle of a bathroom already shown; Airbnb did not say.",
+        "he": "חדר רחצה עם מקלחון זכוכית וארון כיור כחול. ייתכן שזו זווית נוספת של חדר שכבר מופיע; ב-Airbnb לא צוין."
+      }
+    },
+    {
+      "id": "laundry",
+      "file": "06-laundry.jpg",
+      "category": "laundry",
+      "order": 230,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Stacked washer and dryer built into cabinetry.",
+        "he": "מכונת כביסה ומייבש זה מעל זה, משולבים בארון."
+      },
+      "caption": {
+        "en": "Stacked washer and dryer built into cabinetry.",
+        "he": "מכונת כביסה ומייבש זה מעל זה, משולבים בארון."
+      }
+    },
+    {
+      "id": "workspace",
+      "file": "13-workspace.jpg",
+      "category": "workspace",
+      "order": 240,
+      "featured": false,
+      "labelUnverified": true,
+      "alt": {
+        "en": "Desk with a monitor and a chair.",
+        "he": "שולחן עבודה עם מסך וכיסא."
+      },
+      "caption": {
+        "en": "Desk with a monitor and a chair. A dedicated workspace is listed; this photo is not labeled as that spot.",
+        "he": "שולחן עבודה עם מסך וכיסא. ברשימה יש עמדת עבודה ייעודית; התמונה לא סומנה כמקום הזה."
+      }
+    }
+  ]
+}

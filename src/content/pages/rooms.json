@@ -1,0 +1,46 @@
+{
+  "seo": {
+    "title": {
+      "en": "Rooms and sleeping arrangements | Beit Sela, Efrat",
+      "he": "חדרי שינה וסידורי לינה | בית סלע באפרת"
+    },
+    "description": {
+      "en": "How 12 guests sleep in this Efrat family vacation home: six published bedroom layouts, floor mattresses, and the seventh bedroom Airbnb does not describe.",
+      "he": "איך 12 אורחים ישנים בבית הנופש המשפחתי באפרת: שישה חדרי שינה שפורסמו, מזרני רצפה, והחדר השביעי ש-Airbnb לא מתאר."
+    }
+  },
+  "heading": { "en": "Where everyone actually sleeps.", "he": "איפה כל אחד ישן בפועל." },
+  "intro": {
+    "en": [
+      "Airbnb’s summary line reads 12 guests, 7 bedrooms, 7 beds, and 4 baths. The sleeping carousel publishes six bedrooms. Those six include floor mattresses, which are extra places in the room, not a contradiction we tried to “solve.”",
+      "The seventh bedroom is counted in the total. Its beds are not published. The card below is a placeholder until Aharon adds the layout."
+    ],
+    "he": [
+      "שורת הסיכום ב-Airbnb היא 12 אורחים, 7 חדרי שינה, 7 מיטות ו-4 חדרי רחצה. בקרוסלת השינה מפורסמים שישה חדרים. בשישה האלה יש גם מזרני רצפה, כלומר מקומות נוספים בחדר, לא סתירה שניסינו ״לפתור״.",
+      "החדר השביעי נספר בסה״כ. המיטות שלו לא פורסמו. הכרטיס למטה הוא מציין מקום עד שאהרן יוסיף את הסידור."
+    ]
+  },
+  "families": {
+    "heading": { "en": "Families, children, grandparents", "he": "משפחות, ילדים, סבים וסבתות" },
+    "paragraphs": {
+      "en": [
+        "The house is described for large families and for several generations at once. All three reviews mention staying with children. Kids in those notes used the pool, the Xbox, and the board games.",
+        "A sofa bed and the floor mattresses are the flexible beds. They are not a promise of a crib or a high chair. Neither is listed.",
+        "The entry has a staircase. Step-free access is not mentioned. If someone in the group cannot manage stairs, ask Aharon which rooms are realistic before you reserve."
+      ],
+      "he": [
+        "הבית מתואר למשפחות גדולות ולכמה דורות יחד. בשלוש הביקורות מוזכרת שהייה עם ילדים. הילדים באותן ביקורות היו בבריכה, ב-Xbox ובמשחקי הקופסה.",
+        "ספת המיטה ומזרני הרצפה הם המיטות הגמישות. הם לא הבטחה למיטת תינוק או לכיסא אוכל. שניהם לא מופיעים ברשימה.",
+        "בכניסה יש גרם מדרגות. גישה בלי מדרגות לא מוזכרת. אם מישהו בקבוצה לא יכול במדרגות, כדאי לשאול את אהרן אילו חדרים מעשיים לפני שמזמינים."
+      ]
+    }
+  },
+  "photosHeading": {
+    "en": "Sleeping photographs, without a room number",
+    "he": "תמונות שינה, בלי מספר חדר"
+  },
+  "bedsNote": {
+    "en": "Floor mattresses are listed beside the beds in bedrooms 2, 3, 5, and 6. The headline “7 beds” is Airbnb’s summary, not our recount.",
+    "he": "מזרני רצפה מופיעים לצד המיטות בחדרי שינה 2, 3, 5 ו-6. ״7 מיטות״ הוא הסיכום של Airbnb, לא ספירה מחדש שלנו."
+  }
+}

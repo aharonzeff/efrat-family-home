@@ -1,0 +1,30 @@
+---
+import { getStaticPathsForSite } from "../lib/routes";
+import type { Locale, PageId } from "../lib/i18n";
+import ExplorePage from "../views/ExplorePage.astro";
+import FaqPage from "../views/FaqPage.astro";
+import GalleryPage from "../views/GalleryPage.astro";
+import HomePage from "../views/HomePage.astro";
+import HostPage from "../views/HostPage.astro";
+import RoomsPage from "../views/RoomsPage.astro";
+import ShabbatPage from "../views/ShabbatPage.astro";
+
+export function getStaticPaths() {
+  return getStaticPathsForSite();
+}
+
+const views = {
+  home: HomePage,
+  gallery: GalleryPage,
+  rooms: RoomsPage,
+  shabbat: ShabbatPage,
+  explore: ExplorePage,
+  host: HostPage,
+  faq: FaqPage,
+};
+
+const { locale, page } = Astro.props as { locale: Locale; page: PageId };
+const View = views[page];
+---
+
+<View locale={locale} />

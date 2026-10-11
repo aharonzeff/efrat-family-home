@@ -1,0 +1,30 @@
+{
+  "seo": {
+    "title": {
+      "en": "Jerusalem and Gush Etzion from Efrat | Beit Sela",
+      "he": "ירושלים וגוש עציון מאפרת | בית סלע"
+    },
+    "description": {
+      "en": "A practical guide from a family vacation home in Efrat: the Old City, Machane Yehuda, Herodium, Gush Etzion wineries, and family stops, with typical drive times.",
+      "he": "מדריך מעשי מבית נופש משפחתי באפרת: העיר העתיקה, מחנה יהודה, הרודיון, יקבים בגוש עציון ועצירות למשפחות, עם זמני נסיעה אופייניים."
+    }
+  },
+  "heading": {
+    "en": "Jerusalem one way, the bloc the other.",
+    "he": "ירושלים לכיוון אחד, הגוש לכיוון השני."
+  },
+  "intro": {
+    "en": [
+      "Efrat sits in Gush Etzion, about 20 minutes from Jerusalem as the listing describes it. The drives below are typical ranges in ordinary traffic. Friday afternoons and holiday eves are slower, and they are a poor time to discover that a market has closed.",
+      "Links go to the place’s own site or to the Gush Etzion tourism board. Hours and prices change. Nothing here is a tour we run, and the house is not a venue."
+    ],
+    "he": [
+      "אפרת יושבת בגוש עציון, כעשרים דקות מירושלים כפי שהרשימה מתארת. הנסיעות למטה הן טווחים אופייניים בתנועה רגילה. שישי אחה״צ וערבי חג איטיים יותר, וזה זמן גרוע לגלות ששוק נסגר.",
+      "הקישורים מובילים לאתר של המקום עצמו או לתיירות גוש עציון. שעות ומחירים משתנים. אף פריט כאן אינו סיור שאנחנו מפעילים, והבית אינו אולם אירועים."
+    ]
+  },
+  "mapNote": {
+    "en": "The map shows Efrat in general. It is not the house, and it is not a walking route to a synagogue.",
+    "he": "המפה מראה את אפרת באופן כללי. זה לא הבית, וזה לא מסלול הליכה לבית כנסת."
+  }
+}

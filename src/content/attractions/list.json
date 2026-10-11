@@ -1,0 +1,230 @@
+{
+  "items": [
+    {
+      "id": "old-city",
+      "order": 10,
+      "category": "jerusalem",
+      "name": { "en": "Jerusalem Old City", "he": "העיר העתיקה בירושלים" },
+      "summary": {
+        "en": "The Old City’s gates, quarters, and holy sites are the usual first day out. The house listing puts Jerusalem about 20 minutes away; reaching a gate and parking often takes longer than the drive into the city.",
+        "he": "השערים, הרבעים והמקומות הקדושים בעיר העתיקה הם בדרך כלל היום הראשון מחוץ לבית. לפי הרשימה ירושלים במרחק של כ-20 דקות; ההגעה לשער ומציאת חניה לוקחות לעיתים יותר מהנסיעה אל העיר."
+      },
+      "drive": {
+        "en": "About 25–40 minutes, traffic and parking included",
+        "he": "כ-25–40 דקות, כולל פקקים וחניה"
+      },
+      "url": "https://www.itraveljerusalem.com/lobby/old-city",
+      "linkLabel": { "en": "Old City guide", "he": "מדריך העיר העתיקה" }
+    },
+    {
+      "id": "kotel",
+      "order": 20,
+      "category": "jerusalem",
+      "name": { "en": "Western Wall", "he": "הכותל המערבי" },
+      "summary": {
+        "en": "The Western Wall is inside the Old City. The official Kotel site publishes visitor information; iTravelJerusalem has a short attraction page as well.",
+        "he": "הכותל המערבי נמצא בתוך העיר העתיקה. באתר הרשמי של הכותל מתפרסם מידע למבקרים, וגם ב-iTravelJerusalem יש עמוד קצר."
+      },
+      "drive": {
+        "en": "Same drive as the Old City, then a walk from the gate",
+        "he": "אותה נסיעה כמו לעיר העתיקה, ואחר כך הליכה מהשער"
+      },
+      "url": "https://thekotel.org/en/",
+      "linkLabel": { "en": "Western Wall official site", "he": "האתר הרשמי של הכותל" }
+    },
+    {
+      "id": "machane",
+      "order": 30,
+      "category": "jerusalem",
+      "name": { "en": "Machane Yehuda Market", "he": "שוק מחנה יהודה" },
+      "summary": {
+        "en": "Jerusalem’s produce and food market, useful for a big shop or a weekday lunch. On Friday it is crowded and closes for Shabbat; check the day’s hours before you go.",
+        "he": "שוק הירקות והאוכל של ירושלים, מתאים לקנייה גדולה או לארוחת צהריים באמצע השבוע. ביום שישי צפוף ונסגר לקראת שבת; כדאי לבדוק שעות באותו יום."
+      },
+      "drive": {
+        "en": "About 25–40 minutes to central Jerusalem",
+        "he": "כ-25–40 דקות למרכז ירושלים"
+      },
+      "url": "https://www.itraveljerusalem.com/lobby/machane-yehuda-market",
+      "linkLabel": { "en": "Market guide", "he": "מדריך השוק" }
+    },
+    {
+      "id": "museum",
+      "order": 40,
+      "category": "jerusalem",
+      "name": { "en": "The Israel Museum", "he": "מוזיאון ישראל" },
+      "summary": {
+        "en": "The national museum, in west Jerusalem, with archaeology, Judaica, and art on one campus. Hours change on holidays and Fridays.",
+        "he": "המוזיאון הלאומי, במערב ירושלים, עם ארכאולוגיה, יודאיקה ואמנות בקמפוס אחד. שעות הפתיחה משתנות בחגים ובימי שישי."
+      },
+      "drive": {
+        "en": "About 30–45 minutes",
+        "he": "כ-30–45 דקות"
+      },
+      "url": "https://www.imj.org.il/en",
+      "linkLabel": { "en": "Israel Museum", "he": "מוזיאון ישראל" }
+    },
+    {
+      "id": "yad-vashem",
+      "order": 50,
+      "category": "jerusalem",
+      "name": { "en": "Yad Vashem", "he": "יד ושם" },
+      "summary": {
+        "en": "Israel’s Holocaust memorial and museum, on the western edge of Jerusalem. It is a serious visit; look at the age guidance on the official site before bringing children.",
+        "he": "אתר ההנצחה והמוזיאון לשואה, בקצה המערבי של ירושלים. זה ביקור רציני; כדאי לקרוא באתר הרשמי את ההנחיות לגיל לפני שמגיעים עם ילדים."
+      },
+      "drive": {
+        "en": "About 30–45 minutes",
+        "he": "כ-30–45 דקות"
+      },
+      "url": "https://www.yadvashem.org/",
+      "linkLabel": { "en": "Yad Vashem", "he": "יד ושם" }
+    },
+    {
+      "id": "zoo",
+      "order": 60,
+      "category": "family",
+      "name": { "en": "Jerusalem Biblical Zoo", "he": "גן החיות התנ\"כי בירושלים" },
+      "summary": {
+        "en": "A large zoo in southwest Jerusalem, with room for a family to spend most of a day. Buy tickets on the zoo’s site if you want to skip the gate line.",
+        "he": "גן חיות גדול בדרום-מערב ירושלים, עם מקום למשפחה לבלות בו רוב היום. אם רוצים לדלג על התור בכניסה, קונים כרטיסים באתר הגן."
+      },
+      "drive": {
+        "en": "About 25–40 minutes",
+        "he": "כ-25–40 דקות"
+      },
+      "url": "https://www.jerusalemzoo.org.il/en",
+      "linkLabel": { "en": "Biblical Zoo", "he": "גן החיות התנ\"כי" }
+    },
+    {
+      "id": "herodium",
+      "order": 70,
+      "category": "gush",
+      "name": { "en": "Herodium National Park", "he": "גן לאומי הרודיון" },
+      "summary": {
+        "en": "Herod’s palace and burial hill in eastern Gush Etzion: archaeology, underground passages, and a wide view. The Gush Etzion tourism board points to the Israel Nature and Parks Authority for directions and hours.",
+        "he": "ארמון ההר והקבר של הורדוס במזרח גוש עציון: ארכאולוגיה, מעברים תת-קרקעיים ונוף רחב. תיירות גוש עציון מפנה לרשות הטבע והגנים להגעה ולשעות."
+      },
+      "drive": {
+        "en": "About 10–15 minutes toward eastern Gush Etzion",
+        "he": "כ-10–15 דקות לכיוון מזרח גוש עציון"
+      },
+      "url": "https://etziontour.org.il/en/item/herodium-national-park/",
+      "linkLabel": { "en": "Herodium on the tourism board", "he": "הרודיון באתר התיירות" }
+    },
+    {
+      "id": "heritage",
+      "order": 80,
+      "category": "gush",
+      "name": { "en": "Gush Etzion Heritage Center", "he": "מרכז מורשת גוש עציון" },
+      "summary": {
+        "en": "A sound-and-light visit at Kibbutz Kfar Etzion about the bloc’s history. The tourism board says entry is by advance booking.",
+        "he": "ביקור עם מיצג אור-קולי בקיבוץ כפר עציון על תולדות הגוש. באתר התיירות כתוב שהכניסה בתיאום מראש."
+      },
+      "drive": {
+        "en": "About 10 minutes, toward Kfar Etzion",
+        "he": "כ-10 דקות, לכיוון כפר עציון"
+      },
+      "url": "https://etziontour.org.il/en/item/gush-etzion-heritage-center/",
+      "linkLabel": { "en": "Heritage Center", "he": "מרכז המורשת" }
+    },
+    {
+      "id": "oz",
+      "order": 90,
+      "category": "family",
+      "name": { "en": "Oz veGaon Nature Preserve", "he": "שמורת עוז וגאו\"ן" },
+      "summary": {
+        "en": "A nature preserve just above Gush Etzion Junction, with picnic tables, a playground, and lookouts between the hills. The tourism board asks groups to coordinate in advance.",
+        "he": "שמורת טבע ממש מעל צומת גוש עציון, עם שולחנות פיקניק, מתקנים לילדים ומצפורים בין הגבעות. באתר התיירות מבקשים לתאם קבוצות מראש."
+      },
+      "drive": {
+        "en": "About 10 minutes, by the junction",
+        "he": "כ-10 דקות, ליד הצומת"
+      },
+      "url": "https://etziontour.org.il/en/item/oz-vegaon-nature-preserve/",
+      "linkLabel": { "en": "Oz veGaon", "he": "עוז וגאו\"ן" }
+    },
+    {
+      "id": "trail",
+      "order": 100,
+      "category": "gush",
+      "name": { "en": "Path of the Patriarchs", "he": "דרך האבות" },
+      "summary": {
+        "en": "The blue trail through Gush Etzion, listed by the regional tourism board. Trailheads vary, so use their page for the current route rather than a single pin from the house.",
+        "he": "השביל הכחול בגוש עציון, כפי שהוא מופיע באתר התיירות האזורי. נקודות ההתחלה משתנות, ולכן עדיף להשתמש בעמוד שלהם ולא בסיכה אחת מהבית."
+      },
+      "drive": {
+        "en": "Access points are often within about 10–20 minutes",
+        "he": "נקודות גישה נמצאות לעיתים קרובות בטווח של כ-10–20 דקות"
+      },
+      "url": "https://etziontour.org.il/en/item/blue-trail-path-of-the-patriarchs/",
+      "linkLabel": { "en": "Trail page", "he": "עמוד השביל" }
+    },
+    {
+      "id": "etzion-wine",
+      "order": 110,
+      "category": "wine",
+      "name": { "en": "Gush Etzion Winery", "he": "יקב גוש עציון" },
+      "summary": {
+        "en": "The visitors’ center at Gush Etzion Junction. The tourism board describes tastings from a bridge over the winery, because the wine is handled under a stricter kosher standard and visitors do not touch the barrels. Book ahead; hours on that page are shorter on Friday.",
+        "he": "מרכז המבקרים בצומת גוש עציון. באתר התיירות מתוארות טעימות מגשר מעל היקב, כי היין מטופל לפי סטנדרט כשרות מחמיר ומבקרים לא נוגעים בחביות. כדאי לתאם מראש; לפי העמוד השעות קצרות יותר ביום שישי."
+      },
+      "drive": {
+        "en": "About 10 minutes, at the junction",
+        "he": "כ-10 דקות, בצומת"
+      },
+      "url": "https://etziontour.org.il/en/item/gush-etzion-winery-visitors-center/",
+      "linkLabel": { "en": "Winery visitors’ center", "he": "מרכז המבקרים של היקב" }
+    },
+    {
+      "id": "lavie",
+      "order": 120,
+      "category": "wine",
+      "name": { "en": "Lavie Winery", "he": "יקב לביא" },
+      "summary": {
+        "en": "A liqueur producer in the Gush Etzion industrial park, not a vineyard tour at the house. The tourism board says visits are by appointment and lists Badatz Mehadrin Gush Etzion for the liqueurs.",
+        "he": "יצרן ליקרים באזור התעשייה של גוש עציון, לא סיור כרמים בבית. באתר התיירות כתוב שהביקור בתיאום, ומצוינת כשרות בד\"ץ מהדרין גוש עציון לליקרים."
+      },
+      "drive": {
+        "en": "About 10 minutes, to the industrial park",
+        "he": "כ-10 דקות, לאזור התעשייה"
+      },
+      "url": "https://etziontour.org.il/en/item/lavie-winery/",
+      "linkLabel": { "en": "Lavie on the tourism board", "he": "לביא באתר התיירות" }
+    },
+    {
+      "id": "tourism-board",
+      "order": 130,
+      "category": "gush",
+      "name": { "en": "Gush Etzion tourism board", "he": "תיירות גוש עציון" },
+      "summary": {
+        "en": "The regional site for hours, trail maps, and smaller stops that change by season. Drive times on this page are typical ranges, not a live route.",
+        "he": "האתר האזורי לשעות, מפות שבילים ועצירות קטנות שמשתנות לפי עונה. זמני הנסיעה בעמוד הזה הם טווחים אופייניים, לא מסלול חי."
+      },
+      "drive": {
+        "en": "Most listed stops are a short drive inside the bloc",
+        "he": "רוב העצירות שברשימה הן נסיעה קצרה בתוך הגוש"
+      },
+      "url": "https://etziontour.org.il/en/",
+      "linkLabel": { "en": "Etzion tourism", "he": "תיירות גוש עציון" }
+    },
+    {
+      "id": "groceries",
+      "order": 140,
+      "category": "practical",
+      "name": { "en": "Groceries", "he": "קניות לבית" },
+      "summary": {
+        "en": "A guest in August 2026 wrote that a supermarket is a three-minute walk from the house. The listing does not name the shop. For a larger Friday shop, Machane Yehuda is the market linked above. Check closing times before Shabbat.",
+        "he": "אורח באוגוסט 2026 כתב שסופרמרקט נמצא במרחק הליכה של כשלוש דקות מהבית. שם החנות לא מופיע ברשימה. לקנייה גדולה יותר ביום שישי, שוק מחנה יהודה מקושר למעלה. כדאי לבדוק שעות סגירה לפני שבת."
+      },
+      "drive": {
+        "en": "The unnamed supermarket: a guest’s three-minute walk",
+        "he": "הסופרמרקט שלא צוין בשמו: הליכה של כשלוש דקות לפי אורח"
+      },
+      "linkLabel": {
+        "en": "Guest’s note is on the Airbnb listing",
+        "he": "ההערה של האורח נמצאת ברשימת Airbnb"
+      }
+    }
+  ]
+}

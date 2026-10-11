@@ -1,0 +1,58 @@
+---
+import { bookingHref } from "../lib/booking";
+import { t, type Locale } from "../lib/i18n";
+import type { SiteContent } from "../lib/content";
+
+interface Props {
+  locale: Locale;
+  settings: SiteContent["settings"];
+  ui: SiteContent["ui"];
+  placement: string;
+  intent?: "availability" | "reserve";
+  label?: { en: string; he: string };
+  variant?: "solid" | "ghost" | "text" | "inverse";
+  class?: string;
+  track?: "airbnb_click" | "contact_click";
+}
+
+const {
+  locale,
+  settings,
+  ui,
+  placement,
+  intent = "availability",
+  label,
+  variant = "solid",
+  class: className = "",
+  track = "airbnb_click",
+} = Astro.props;
+
+const strings = ui as {
+  cta: Record<"availability" | "reserve", { en: string; he: string }>;
+  opensNewTab: { en: string; he: string };
+};
+
+const href = bookingHref(settings, placement);
+const text = t(locale, label || strings.cta[intent]);
+const classes = {
+  solid:
+    "inline-flex items-center justify-center gap-2 bg-pine px-5 py-3 text-center text-sm font-semibold tracking-wide text-paper hover:bg-olive",
+  ghost:
+    "inline-flex items-center justify-center gap-2 border border-pine px-5 py-3 text-center text-sm font-semibold text-pine hover:bg-cream",
+  text: "inline-flex items-center gap-2 text-sm font-semibold text-pine underline decoration-clay underline-offset-4 hover:text-clay",
+  inverse:
+    "inline-flex items-center justify-center gap-2 bg-paper px-5 py-3 text-center text-sm font-semibold tracking-wide text-pine hover:bg-cream",
+}[variant];
+---
+
+<a
+  href={href}
+  class:list={[classes, className]}
+  data-track={track}
+  data-track-detail={placement}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  {text}
+  <span class="sr-only">({t(locale, strings.opensNewTab)})</span>
+</a>

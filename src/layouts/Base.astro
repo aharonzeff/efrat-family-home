@@ -1,0 +1,123 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import MobileBar from "../components/MobileBar.astro";
+import { loadContent } from "../lib/content";
+import { getLocale, localePath, locales, t, type Locale, type PageId } from "../lib/i18n";
+import { buildGraph } from "../lib/schema";
+
+interface Props {
+  locale: Locale;
+  page: PageId;
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+
+const { locale, page, title, description, noindex = false } = Astro.props;
+const content = await loadContent();
+const meta = getLocale(locale);
+const canonical = new URL(localePath(locale, page), Astro.site).href;
+const ogImage = new URL(content.settings.ogImage, Astro.site).href;
+const graph = buildGraph({
+  content,
+  locale,
+  page,
+  site: Astro.site,
+  title,
+  description,
+});
+const json = JSON.stringify(graph).replace(/</g, "\\u003c");
+const token =
+  import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN || content.settings.analytics.cloudflareToken;
+const endpoint = import.meta.env.PUBLIC_ANALYTICS_ENDPOINT || content.settings.analytics.endpoint;
+const strings = content.ui as { skip: { en: string; he: string } };
+---
+
+<!doctype html>
+<html lang={meta.htmlLang} dir={meta.dir} data-analytics-endpoint={endpoint || undefined}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    {
+      locales.map((item) => (
+        <link
+          rel="alternate"
+          hreflang={item.htmlLang}
+          href={new URL(localePath(item.code, page), Astro.site).href}
+        />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={new URL(localePath("en", page), Astro.site).href} />
+    <meta name="theme-color" content="#f7f4ee" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={meta.ogLocale} />
+    {
+      locales
+        .filter((item) => item.code !== locale)
+        .map((item) => <meta property="og:locale:alternate" content={item.ogLocale} />)
+    }
+    <meta property="og:site_name" content={t(locale, content.settings.brandName)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json" set:html={json} />
+    {
+      token && (
+        <script
+          is:inline
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={`{"token":"${token}"}`}
+        />
+      )
+    }
+  </head>
+  <body class="bg-paper text-ink pb-24 md:pb-0">
+    <a
+      href="#content"
+      class="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-50 focus:bg-paper focus:px-3 focus:py-2"
+    >
+      {t(locale, strings.skip)}
+    </a>
+    <Header locale={locale} page={page} content={content} />
+    <main id="content">
+      <slot />
+    </main>
+    <Footer locale={locale} content={content} />
+    <MobileBar locale={locale} content={content} />
+    <script>
+      const endpoint = document.documentElement.dataset.analyticsEndpoint || "";
+      document.addEventListener("click", (event) => {
+        const target = (event.target as HTMLElement | null)?.closest("[data-track]");
+        if (!(target instanceof HTMLElement)) return;
+        const name = target.getAttribute("data-track");
+        if (!name) return;
+        const payload = {
+          event: name,
+          detail: target.getAttribute("data-track-detail") || "",
+          path: location.pathname,
+          href: target.getAttribute("href") || "",
+          ts: Date.now(),
+        };
+        const w = window as Window & { dataLayer?: unknown[] };
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push(payload);
+        if (endpoint && navigator.sendBeacon) {
+          navigator.sendBeacon(endpoint, new Blob([JSON.stringify(payload)], { type: "application/json" }));
+        }
+      });
+    </script>
+  </body>
+</html>

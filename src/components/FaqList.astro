@@ -1,0 +1,30 @@
+---
+import { t, tList, type Locale } from "../lib/i18n";
+import type { SiteContent } from "../lib/content";
+
+interface Props {
+  locale: Locale;
+  faqs: SiteContent["faqs"];
+}
+const { locale, faqs } = Astro.props;
+---
+
+<div class="divide-y divide-line border-y border-line">
+  {
+    faqs.map((item) => (
+      <details class="group py-4">
+        <summary class="flex cursor-pointer items-baseline justify-between gap-4 text-lg font-semibold">
+          <span>{t(locale, item.question)}</span>
+          <span class="font-serif text-clay group-open:rotate-45" aria-hidden="true">
+            +
+          </span>
+        </summary>
+        <div class="grid max-w-3xl gap-3 pt-3 text-char">
+          {tList(locale, item.answer).map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+      </details>
+    ))
+  }
+</div>

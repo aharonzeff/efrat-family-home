@@ -1,0 +1,107 @@
+{
+  "skip": { "en": "Skip to content", "he": "דילוג לתוכן" },
+  "navLabel": { "en": "Primary", "he": "ניווט ראשי" },
+  "menu": { "en": "Menu", "he": "תפריט" },
+  "close": { "en": "Close", "he": "סגירה" },
+  "languageLabel": { "en": "Language", "he": "שפה" },
+  "opensNewTab": { "en": "opens in a new tab", "he": "נפתח בלשונית חדשה" },
+  "home": { "en": "Home", "he": "ראשי" },
+  "nav": {
+    "home": { "en": "Home", "he": "ראשי" },
+    "gallery": { "en": "Gallery", "he": "גלריה" },
+    "rooms": { "en": "Rooms", "he": "לינה" },
+    "shabbat": { "en": "Shabbat", "he": "שבת" },
+    "explore": { "en": "The area", "he": "הסביבה" },
+    "host": { "en": "Host", "he": "המארח" },
+    "faq": { "en": "FAQ", "he": "שאלות" }
+  },
+  "cta": {
+    "availability": { "en": "Check Availability on Airbnb", "he": "בדקו זמינות ב-Airbnb" },
+    "reserve": { "en": "Reserve on Airbnb", "he": "הזמינו ב-Airbnb" }
+  },
+  "viaAirbnb": { "en": "via Airbnb", "he": "דרך Airbnb" },
+  "needsConfirmation": { "en": "Needs confirmation", "he": "ממתין לאישור" },
+  "photoUnlabeled": {
+    "en": "Airbnb did not caption this photo. The room label is unverified.",
+    "he": "ב-Airbnb אין כיתוב לתמונה הזו. שיוך החדר אינו מאומת."
+  },
+  "footerNote": {
+    "en": "Booking and payment happen on Airbnb. This site does not take reservations or payments.",
+    "he": "ההזמנה והתשלום נעשים ב-Airbnb. האתר הזה אינו גובה תשלום ואינו מנהל הזמנות."
+  },
+  "footerPhotos": {
+    "en": "Photographs are from the Airbnb listing and are stored in this project. Room labels were not provided by Airbnb.",
+    "he": "התמונות לקוחות מרשימת Airbnb ושמורות בפרויקט. ב-Airbnb לא סופקו שמות חדרים."
+  },
+  "rights": { "en": "Beit Sela, Efrat.", "he": "בית סלע, אפרת." },
+  "breadcrumb": { "en": "Breadcrumb", "he": "נתיב" },
+  "categories": {
+    "entry": { "en": "Entry", "he": "כניסה" },
+    "living": { "en": "Living", "he": "סלון" },
+    "dining": { "en": "Dining", "he": "פינת אוכל" },
+    "kitchen": { "en": "Kitchen", "he": "מטבח" },
+    "bedroom": { "en": "Bedrooms", "he": "חדרי שינה" },
+    "bathroom": { "en": "Bathrooms", "he": "חדרי רחצה" },
+    "outdoor": { "en": "Outdoors", "he": "חוץ" },
+    "laundry": { "en": "Laundry", "he": "כביסה" },
+    "workspace": { "en": "Workspace", "he": "עמדת עבודה" },
+    "all": { "en": "All", "he": "הכל" },
+    "jerusalem": { "en": "Jerusalem", "he": "ירושלים" },
+    "gush": { "en": "Gush Etzion", "he": "גוש עציון" },
+    "wine": { "en": "Wineries", "he": "יקבים" },
+    "family": { "en": "Families", "he": "משפחות" },
+    "practical": { "en": "Practical", "he": "שימושי" }
+  },
+  "gallery": {
+    "filterLabel": { "en": "Filter photos", "he": "סינון תמונות" },
+    "open": { "en": "Open photo", "he": "פתיחת תמונה" },
+    "previous": { "en": "Previous photo", "he": "תמונה קודמת" },
+    "next": { "en": "Next photo", "he": "תמונה הבאה" },
+    "dialog": { "en": "Photo viewer", "he": "תצוגת תמונות" },
+    "count": { "en": "Photo", "he": "תמונה" },
+    "of": { "en": "of", "he": "מתוך" }
+  },
+  "facts": {
+    "guests": { "en": "guests", "he": "אורחים" },
+    "bedrooms": { "en": "bedrooms", "he": "חדרי שינה" },
+    "beds": { "en": "beds listed", "he": "מיטות ברשימה" },
+    "baths": { "en": "baths", "he": "חדרי רחצה" },
+    "checkIn": { "en": "Check-in", "he": "צ'ק-אין" },
+    "checkOut": { "en": "Checkout", "he": "צ'ק-אאוט" },
+    "pool": { "en": "Pool", "he": "בריכה" },
+    "rating": { "en": "from 3 reviews", "he": "מ-3 ביקורות" }
+  },
+  "ratingLine": {
+    "en": "5.0 from 3 reviews, as of October 2026. This page does not update the score on its own.",
+    "he": "5.0 מתוך 3 ביקורות, נכון לאוקטובר 2026. העמוד הזה אינו מעדכן את הציון מעצמו."
+  },
+  "included": { "en": "Included on the listing", "he": "כלול ברשימה" },
+  "notIncluded": { "en": "Not included on the listing", "he": "לא כלול ברשימה" },
+  "readMore": { "en": "Read more", "he": "להמשך" },
+  "viewGallery": { "en": "View the gallery", "he": "לגלריה המלאה" },
+  "viewRooms": { "en": "Sleeping arrangements", "he": "סידורי לינה" },
+  "viewShabbat": { "en": "Shabbat at the house", "he": "שבת בבית" },
+  "viewExplore": { "en": "Explore the area", "he": "לטייל בסביבה" },
+  "viewHost": { "en": "Meet Aharon", "he": "להכיר את אהרן" },
+  "viewFaq": { "en": "All questions", "he": "כל השאלות" },
+  "mapTitle": { "en": "Map of Efrat, general area", "he": "מפה של אפרת, אזור כללי" },
+  "mapLink": { "en": "Open the area in OpenStreetMap", "he": "פתיחת האזור ב-OpenStreetMap" },
+  "external": { "en": "Visit site", "he": "לאתר" },
+  "drive": { "en": "Typical drive", "he": "נסיעה אופיינית" },
+  "fixedBed": { "en": "Listed sleeping place", "he": "מקום שינה ברשימה" },
+  "unpublished": { "en": "Not published", "he": "לא פורסם" },
+  "contact": { "en": "Message Aharon on Airbnb", "he": "כתיבה לאהרן ב-Airbnb" },
+  "latestReviews": { "en": "Latest reviews on Airbnb", "he": "הביקורות העדכניות ב-Airbnb" },
+  "houseRules": { "en": "House rules", "he": "כללי הבית" },
+  "rules": {
+    "guests": { "en": "12 guests maximum", "he": "עד 12 אורחים" },
+    "pets": { "en": "No pets", "he": "אין כניסה לבעלי חיים" },
+    "smoking": { "en": "No smoking", "he": "אין עישון" },
+    "parties": { "en": "No parties or events", "he": "אין מסיבות ואין אירועים" },
+    "quiet": { "en": "Quiet hours", "he": "שעות שקט" },
+    "leave": {
+      "en": "Before you leave: throw trash away, turn things off, and return the keys.",
+      "he": "לפני היציאה: לזרוק את הזבל, לכבות את מה שהודלק, ולהחזיר את המפתחות."
+    }
+  }
+}

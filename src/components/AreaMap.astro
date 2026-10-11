@@ -1,0 +1,41 @@
+---
+import { t, type Locale } from "../lib/i18n";
+import type { SiteContent } from "../lib/content";
+
+interface Props {
+  locale: Locale;
+  content: SiteContent;
+  note: string;
+}
+const { locale, content, note } = Astro.props;
+const strings = content.ui as {
+  mapTitle: { en: string; he: string };
+  mapLink: { en: string; he: string };
+  opensNewTab: { en: string; he: string };
+};
+const bbox = encodeURIComponent(content.settings.map.bbox);
+const src = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik`;
+---
+
+<figure>
+  <iframe
+    class="h-80 w-full border border-line bg-stone"
+    title={t(locale, strings.mapTitle)}
+    src={src}
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <figcaption class="mt-3 text-sm text-char">
+    <p>{note}</p>
+    <p class="mt-2">
+      <a
+        class="font-semibold text-pine underline decoration-clay underline-offset-4"
+        href={content.settings.map.openStreetMap}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {t(locale, strings.mapLink)}
+        <span class="sr-only">({t(locale, strings.opensNewTab)})</span>
+      </a>
+    </p>
+  </figcaption>
+</figure>

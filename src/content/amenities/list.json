@@ -1,0 +1,223 @@
+{
+  "groups": [
+    {
+      "id": "bathroom",
+      "included": true,
+      "title": { "en": "Bathroom", "he": "חדר רחצה" },
+      "items": [
+        { "id": "bathtub", "name": { "en": "Bathtub", "he": "אמבטיה" } },
+        { "id": "shampoo", "name": { "en": "Shampoo", "he": "שמפו" } },
+        { "id": "conditioner", "name": { "en": "Conditioner", "he": "מרכך" } },
+        { "id": "shower-gel", "name": { "en": "Shower gel", "he": "ג'ל רחצה" } }
+      ]
+    },
+    {
+      "id": "bedroom-laundry",
+      "included": true,
+      "title": { "en": "Bedroom and laundry", "he": "שינה וכביסה" },
+      "items": [
+        { "id": "washer", "name": { "en": "Washer", "he": "מכונת כביסה" } },
+        { "id": "dryer", "name": { "en": "Dryer", "he": "מייבש כביסה" } },
+        {
+          "id": "essentials",
+          "name": {
+            "en": "Essentials (towels, bed sheets, soap, and toilet paper)",
+            "he": "מוצרי בסיס (מגבות, סדינים, סבון ונייר טואלט)"
+          }
+        },
+        { "id": "bed-linens", "name": { "en": "Bed linens", "he": "מצעים" } },
+        {
+          "id": "extra-pillows",
+          "name": { "en": "Extra pillows and blankets", "he": "כריות ושמיכות נוספות" }
+        },
+        { "id": "iron", "name": { "en": "Iron", "he": "מגהץ" } },
+        {
+          "id": "drying-rack",
+          "name": { "en": "Drying rack for clothing", "he": "מתלה לייבוש כביסה" }
+        }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "included": true,
+      "title": { "en": "Entertainment", "he": "בילוי" },
+      "items": [
+        { "id": "ethernet", "name": { "en": "Ethernet connection", "he": "חיבור רשת קווי" } },
+        { "id": "tv", "name": { "en": "TV", "he": "טלוויזיה" } },
+        {
+          "id": "bluetooth",
+          "name": { "en": "Bluetooth sound system", "he": "מערכת שמע בבלוטות'" }
+        },
+        {
+          "id": "xbox",
+          "name": { "en": "Game console: Xbox One", "he": "קונסולת משחקים: Xbox One" }
+        },
+        {
+          "id": "treadmill",
+          "name": { "en": "Exercise equipment: treadmill", "he": "ציוד כושר: הליכון" }
+        },
+        { "id": "arcade", "name": { "en": "Arcade games", "he": "משחקי ארקייד" } },
+        {
+          "id": "books",
+          "name": { "en": "Books and reading material", "he": "ספרים וחומר קריאה" }
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "included": true,
+      "title": { "en": "Family", "he": "משפחה" },
+      "items": [
+        { "id": "board-games", "name": { "en": "Board games", "he": "משחקי קופסה" } }
+      ]
+    },
+    {
+      "id": "climate",
+      "included": true,
+      "title": { "en": "Heating and cooling", "he": "חימום וקירור" },
+      "items": [
+        { "id": "ac", "name": { "en": "Air conditioning", "he": "מיזוג אוויר" } },
+        { "id": "ceiling-fan", "name": { "en": "Ceiling fan", "he": "מאוורר תקרה" } }
+      ]
+    },
+    {
+      "id": "safety",
+      "included": true,
+      "title": { "en": "Home safety", "he": "בטיחות" },
+      "items": [
+        { "id": "smoke", "name": { "en": "Smoke alarm", "he": "גלאי עשן" } },
+        {
+          "id": "co",
+          "name": { "en": "Carbon monoxide alarm", "he": "גלאי פחמן חד-חמצני" }
+        },
+        { "id": "extinguisher", "name": { "en": "Fire extinguisher", "he": "מטף כיבוי אש" } },
+        { "id": "first-aid", "name": { "en": "First aid kit", "he": "ערכת עזרה ראשונה" } }
+      ]
+    },
+    {
+      "id": "internet",
+      "included": true,
+      "title": { "en": "Internet and office", "he": "אינטרנט ועבודה" },
+      "items": [
+        { "id": "wifi", "name": { "en": "Wifi", "he": "אינטרנט אלחוטי" } },
+        {
+          "id": "workspace",
+          "name": { "en": "Dedicated workspace", "he": "עמדת עבודה ייעודית" }
+        }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "included": true,
+      "title": { "en": "Kitchen and dining", "he": "מטבח ופינת אוכל" },
+      "items": [
+        {
+          "id": "kitchen",
+          "name": {
+            "en": "Kitchen (space where guests can cook their own meals)",
+            "he": "מטבח (מקום שבו האורחים מבשלים בעצמם)"
+          }
+        },
+        { "id": "fridge", "name": { "en": "Refrigerator", "he": "מקרר" } },
+        { "id": "microwave", "name": { "en": "Microwave", "he": "מיקרוגל" } },
+        {
+          "id": "cooking-basics",
+          "name": {
+            "en": "Cooking basics (pots and pans, oil, salt and pepper)",
+            "he": "ציוד בישול בסיסי (סירים ומחבתות, שמן, מלח ופלפל)"
+          }
+        },
+        {
+          "id": "dishes",
+          "name": {
+            "en": "Dishes and silverware (plates, bowls, cups, cutlery)",
+            "he": "כלים וסכו\"ם (צלחות, קערות, כוסות וסכו\"ם)"
+          }
+        },
+        { "id": "freezer", "name": { "en": "Freezer", "he": "מקפיא" } },
+        { "id": "dishwasher", "name": { "en": "Dishwasher", "he": "מדיח כלים" } },
+        { "id": "stove", "name": { "en": "Stove", "he": "כיריים" } },
+        { "id": "oven", "name": { "en": "Oven", "he": "תנור" } },
+        { "id": "kettle", "name": { "en": "Hot water kettle", "he": "קומקום" } },
+        { "id": "coffee-maker", "name": { "en": "Coffee maker", "he": "מכונת קפה" } },
+        { "id": "wine-glasses", "name": { "en": "Wine glasses", "he": "כוסות יין" } },
+        { "id": "toaster", "name": { "en": "Toaster", "he": "טוסטר" } },
+        { "id": "baking-sheet", "name": { "en": "Baking sheet", "he": "תבנית אפייה" } },
+        { "id": "blender", "name": { "en": "Blender", "he": "בלנדר" } },
+        {
+          "id": "bbq-utensils",
+          "name": {
+            "en": "Barbecue utensils (grill, charcoal, skewers)",
+            "he": "כלי מנגל (גריל, פחם, שיפודים)"
+          }
+        },
+        { "id": "dining-table", "name": { "en": "Dining table", "he": "שולחן אוכל" } },
+        { "id": "coffee", "name": { "en": "Coffee", "he": "קפה" } }
+      ]
+    },
+    {
+      "id": "location",
+      "included": true,
+      "title": { "en": "Location features", "he": "מאפייני מיקום" },
+      "items": [
+        { "id": "private-entrance", "name": { "en": "Private entrance", "he": "כניסה פרטית" } }
+      ]
+    },
+    {
+      "id": "outdoor",
+      "included": true,
+      "title": { "en": "Outdoor", "he": "חוץ" },
+      "items": [
+        { "id": "backyard", "name": { "en": "Backyard", "he": "חצר" } },
+        {
+          "id": "outdoor-dining",
+          "name": { "en": "Outdoor dining area", "he": "פינת אוכל חיצונית" }
+        },
+        { "id": "bbq", "name": { "en": "BBQ grill", "he": "מנגל" } }
+      ]
+    },
+    {
+      "id": "parking",
+      "included": true,
+      "title": { "en": "Parking and facilities", "he": "חניה ומתקנים" },
+      "items": [
+        {
+          "id": "free-parking",
+          "name": { "en": "Free parking on premises", "he": "חניה חינם במתחם" }
+        },
+        {
+          "id": "street-parking",
+          "name": { "en": "Free street parking", "he": "חניה חינם ברחוב" }
+        },
+        {
+          "id": "pool",
+          "noteKey": "pool",
+          "name": { "en": "Private outdoor pool", "he": "בריכה חיצונית פרטית" }
+        },
+        { "id": "hot-tub", "name": { "en": "Hot tub", "he": "אמבט עיסוי (ג'קוזי)" } },
+        { "id": "ev", "name": { "en": "EV charger", "he": "עמדת טעינה לרכב חשמלי" } },
+        {
+          "id": "paid-parking",
+          "name": { "en": "Paid parking on premises", "he": "חניה בתשלום במתחם" }
+        },
+        { "id": "gated", "name": { "en": "Gated community", "he": "יישוב עם שער" } }
+      ]
+    },
+    {
+      "id": "not-included",
+      "included": false,
+      "title": { "en": "Not included", "he": "לא כלול" },
+      "items": [
+        {
+          "id": "cameras",
+          "name": {
+            "en": "Exterior security cameras on property",
+            "he": "מצלמות אבטחה חיצוניות בנכס"
+          }
+        },
+        { "id": "heating", "name": { "en": "Heating", "he": "חימום" } },
+        { "id": "hot-water", "name": { "en": "Hot water", "he": "מים חמים" } }
+      ]
+    }
+  ]
+}
