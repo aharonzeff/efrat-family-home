@@ -1,0 +1,79 @@
+---
+import AreaMap from "../components/AreaMap.astro";
+import BookingLink from "../components/BookingLink.astro";
+import Base from "../layouts/Base.astro";
+import { loadContent } from "../lib/content";
+import { t, tList, type Locale } from "../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const content = await loadContent();
+const page = content.pages.explore as {
+  seo: { title: { en: string; he: string }; description: { en: string; he: string } };
+  heading: { en: string; he: string };
+  intro: { en: string[]; he: string[] };
+  mapNote: { en: string; he: string };
+};
+const ui = content.ui as {
+  categories: Record<string, { en: string; he: string }>;
+  drive: { en: string; he: string };
+  opensNewTab: { en: string; he: string };
+};
+const categories = ["jerusalem", "gush", "wine", "family", "practical"];
+---
+
+<Base locale={locale} page="explore" title={t(locale, page.seo.title)} description={t(locale, page.seo.description)}>
+  <header class="mx-auto max-w-6xl px-4 pt-16 md:px-6">
+    <div class="stone-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <h1 class="mt-6 max-w-3xl font-serif text-4xl text-pine md:text-6xl">{t(locale, page.heading)}</h1>
+    <div class="mt-6 grid max-w-3xl gap-4 text-lg text-char">
+      {tList(locale, page.intro).map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+  </header>
+
+  <div class="mx-auto max-w-6xl px-4 py-10 md:px-6">
+    <AreaMap locale={locale} content={content} note={t(locale, page.mapNote)} />
+  </div>
+
+  {
+    categories.map((category) => {
+      const items = content.attractions.filter((item) => item.category === category);
+      if (!items.length) return null;
+      return (
+        <section class="mx-auto max-w-6xl px-4 py-8 md:px-6">
+          <h2 class="font-serif text-3xl text-pine">{t(locale, ui.categories[category])}</h2>
+          <div class="mt-6 grid gap-5 md:grid-cols-2">
+            {items.map((item) => (
+              <article class="flex flex-col border border-line bg-paper p-5">
+                <h3 class="font-serif text-2xl">{t(locale, item.name)}</h3>
+                <p class="mt-3 flex-1 text-char">{t(locale, item.summary)}</p>
+                <p class="mt-4 text-sm font-semibold text-olive">
+                  {t(locale, ui.drive)}: {t(locale, item.drive)}
+                </p>
+                {item.url && (
+                  <p class="mt-3">
+                    <a
+                      class="text-sm font-semibold text-pine underline decoration-clay underline-offset-4"
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t(locale, item.linkLabel)}
+                      <span class="sr-only"> ({t(locale, ui.opensNewTab)})</span>
+                    </a>
+                  </p>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      );
+    })
+  }
+
+  <div class="mx-auto max-w-6xl px-4 py-16 md:px-6">
+    <BookingLink locale={locale} settings={content.settings} ui={content.ui} placement="explore" intent="availability" />
+  </div>
+</Base>

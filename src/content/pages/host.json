@@ -1,0 +1,35 @@
+{
+  "seo": {
+    "title": {
+      "en": "Meet Aharon, your host in Efrat | Beit Sela",
+      "he": "המארח אהרן באפרת | בית סלע"
+    },
+    "description": {
+      "en": "Aharon hosts this Efrat family home. He lives in Efrat, speaks English and Hebrew, and Airbnb says he responds within an hour.",
+      "he": "אהרן מארח את הבית המשפחתי באפרת. הוא גר באפרת, דובר אנגלית ועברית, וב-Airbnb כתוב שהוא עונה בתוך שעה."
+    }
+  },
+  "heading": { "en": "Aharon answers the phone. The biography is still blank.", "he": "אהרן עונה. הביוגרפיה עדיין ריקה." },
+  "intro": {
+    "en": [
+      "Aharon is the host named on the Airbnb listing. He lives in Efrat and speaks English and Hebrew. The listing shows a 100% response rate and a reply within an hour. He has been hosting for 9 years.",
+      "The host profile shows 7 reviews and a 5.0 rating. This listing shows 3 reviews, also 5.0, as of October 2026. Guests write his name as Aaron. No Superhost badge is shown."
+    ],
+    "he": [
+      "אהרן הוא המארח שמופיע ברשימת Airbnb. הוא גר באפרת ודובר אנגלית ועברית. ברשימה מופיעים שיעור מענה של 100% ומענה בתוך שעה. הוא מארח כבר 9 שנים.",
+      "בפרופיל המארח מופיעות 7 ביקורות ודירוג 5.0. ברשימה הזו מופיעות 3 ביקורות, גם הן 5.0, נכון לאוקטובר 2026. אורחים כותבים את השם Aaron. תג Superhost לא מוצג."
+    ]
+  },
+  "photoPlaceholder": {
+    "en": "No host photograph was published on the listing. A portrait can be added by replacing this block in the host content file once Aharon provides one.",
+    "he": "ברשימה לא פורסמה תמונת מארח. אפשר להוסיף דיוקן במקום הבלוק הזה בקובץ התוכן של המארח, אחרי שאהרן ימסור תמונה."
+  },
+  "bioPlaceholder": {
+    "en": "No free-text biography was published. The paragraphs above are the public hosting facts, not a life story.",
+    "he": "לא פורסמה ביוגרפיה חופשית. הפסקאות למעלה הן עובדות האירוח הפומביות, לא סיפור חיים."
+  },
+  "family": {
+    "en": "In his own note on the listing, this is the family home where they live with four children. Guests are asked to look after it.",
+    "he": "בהערה שלו ברשימה, זה בית המשפחה שבו הם גרים עם ארבעה ילדים. האורחים מתבקשים לשמור עליו."
+  }
+}

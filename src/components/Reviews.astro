@@ -1,0 +1,45 @@
+---
+import BookingLink from "./BookingLink.astro";
+import type { SiteContent } from "../lib/content";
+import { t, type Locale } from "../lib/i18n";
+
+interface Props {
+  locale: Locale;
+  content: SiteContent;
+  placement?: string;
+}
+const { locale, content, placement = "reviews" } = Astro.props;
+const { reviews, ui, settings } = content;
+const strings = ui as { viaAirbnb: { en: string; he: string } };
+---
+
+<div class="grid gap-6 lg:grid-cols-3">
+  {
+    reviews.items.map((review) => (
+      <figure class="flex h-full flex-col bg-sage/70 p-6">
+        <blockquote class="font-serif text-xl leading-snug text-ink md:text-[1.35rem]">
+          “{t(locale, review.quote)}”
+        </blockquote>
+        <figcaption class="mt-6 text-sm text-char">
+          <span class="font-semibold text-ink">{t(locale, review.name)}</span>
+          <span aria-hidden="true"> · </span>
+          <span>{t(locale, review.dateLabel)}</span>
+          <span aria-hidden="true"> · </span>
+          <span>{t(locale, strings.viaAirbnb)}</span>
+          <span class="mt-1 block">{t(locale, review.context)}</span>
+        </figcaption>
+      </figure>
+    ))
+  }
+</div>
+<p class="mt-4 max-w-3xl text-sm leading-relaxed text-char">{t(locale, reviews.sourceNote)}</p>
+<p class="mt-4">
+  <BookingLink
+    locale={locale}
+    settings={settings}
+    ui={ui}
+    placement={placement}
+    label={reviews.linkLabel}
+    variant="text"
+  />
+</p>

@@ -1,0 +1,280 @@
+---
+import { Image } from "astro:assets";
+import AreaMap from "../components/AreaMap.astro";
+import BookingLink from "../components/BookingLink.astro";
+import FaqList from "../components/FaqList.astro";
+import Gallery from "../components/Gallery.astro";
+import Notice from "../components/Notice.astro";
+import Reviews from "../components/Reviews.astro";
+import Rules from "../components/Rules.astro";
+import Base from "../layouts/Base.astro";
+import { loadContent } from "../lib/content";
+import { localePath, t, tList, type Locale } from "../lib/i18n";
+import { resolvePhoto } from "../lib/photos";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const content = await loadContent();
+const page = content.pages.home as {
+  seo: { title: { en: string; he: string }; description: { en: string; he: string } };
+  hero: { kicker: { en: string; he: string }; title: { en: string; he: string }; lede: { en: string; he: string } };
+  intro: { heading: { en: string; he: string }; paragraphs: { en: string[]; he: string[] } };
+  points: { title: { en: string; he: string }; body: { en: string; he: string } }[];
+  living: { heading: { en: string; he: string }; paragraphs: { en: string[]; he: string[] } };
+  kitchen: { heading: { en: string; he: string }; paragraphs: { en: string[]; he: string[] } };
+  sleep: { heading: { en: string; he: string }; paragraphs: { en: string[]; he: string[] } };
+  outdoors: { heading: { en: string; he: string }; paragraphs: { en: string[]; he: string[] } };
+  reviewsHeading: { en: string; he: string };
+  location: {
+    heading: { en: string; he: string };
+    paragraphs: { en: string[]; he: string[] };
+    mapNote: { en: string; he: string };
+  };
+  hostTeaser: { heading: { en: string; he: string }; paragraphs: { en: string[]; he: string[] } };
+  faqHeading: { en: string; he: string };
+  final: { heading: { en: string; he: string }; paragraphs: { en: string[]; he: string[] } };
+};
+const ui = content.ui as {
+  facts: Record<string, { en: string; he: string }>;
+  ratingLine: { en: string; he: string };
+  needsConfirmation: { en: string; he: string };
+  viewGallery: { en: string; he: string };
+  viewRooms: { en: string; he: string };
+  viewShabbat: { en: string; he: string };
+  viewExplore: { en: string; he: string };
+  viewHost: { en: string; he: string };
+  viewFaq: { en: string; he: string };
+};
+const { settings } = content;
+const hero = resolvePhoto(settings.heroPhoto);
+const living = resolvePhoto("10-living.jpg");
+const dining = resolvePhoto("14-dining.jpg");
+const kitchen = resolvePhoto("01-kitchen.jpg");
+const pool = resolvePhoto("04-pool.jpg");
+const unpublished = content.rooms.find((room) => !room.published);
+const homeFaqs = content.faqs.filter((item) => item.home);
+const linkClass = "text-sm font-semibold text-pine underline decoration-clay underline-offset-4";
+---
+
+<Base locale={locale} page="home" title={t(locale, page.seo.title)} description={t(locale, page.seo.description)}>
+  <section class="relative min-h-[88svh] bg-pine">
+    <Image
+      src={hero}
+      alt={t(locale, content.photos.find((item) => item.file === settings.heroPhoto)!.alt)}
+      widths={[800, 1400, 2000]}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-pine/75 via-pine/15 to-transparent"></div>
+    <div class="relative mx-auto flex min-h-[88svh] max-w-6xl items-end px-4 py-8 md:px-6 md:py-12">
+      <div class="w-full max-w-xl bg-paper p-6 text-ink shadow-xl md:p-8" data-reveal>
+        <div class="stone-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <p class="mt-5 text-xs font-semibold tracking-[0.18em] text-olive uppercase">{t(locale, page.hero.kicker)}</p>
+        <h1 class="mt-3 font-serif text-4xl text-pine md:text-5xl">{t(locale, page.hero.title)}</h1>
+        <p class="mt-4 text-lg leading-relaxed text-char">{t(locale, page.hero.lede)}</p>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <BookingLink locale={locale} settings={settings} ui={content.ui} placement="hero-availability" />
+          <BookingLink
+            locale={locale}
+            settings={settings}
+            ui={content.ui}
+            placement="hero-reserve"
+            intent="reserve"
+            variant="ghost"
+          />
+        </div>
+        <dl class="mt-6 grid grid-cols-2 gap-4 border-t border-line pt-5 sm:grid-cols-4">
+          <div>
+            <dt class="text-xs tracking-wide text-char uppercase">{t(locale, ui.facts.guests)}</dt>
+            <dd class="font-serif text-3xl text-pine">{settings.listing.guests}</dd>
+          </div>
+          <div>
+            <dt class="text-xs tracking-wide text-char uppercase">{t(locale, ui.facts.bedrooms)}</dt>
+            <dd class="font-serif text-3xl text-pine">{settings.listing.bedrooms}</dd>
+          </div>
+          <div>
+            <dt class="text-xs tracking-wide text-char uppercase">{t(locale, ui.facts.baths)}</dt>
+            <dd class="font-serif text-3xl text-pine">{settings.listing.baths}</dd>
+          </div>
+          <div>
+            <dt class="text-xs tracking-wide text-char uppercase">{t(locale, ui.facts.rating)}</dt>
+            <dd class="font-serif text-3xl text-pine">{settings.listing.ratingValue.toFixed(1)}</dd>
+          </div>
+        </dl>
+        <p class="mt-3 text-xs leading-relaxed text-char">{t(locale, ui.ratingLine)}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-6xl gap-10 px-4 py-20 md:px-6 lg:grid-cols-[0.9fr_1.1fr]" data-reveal>
+    <div>
+      <div class="stone-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <h2 class="mt-5 font-serif text-4xl text-pine">{t(locale, page.intro.heading)}</h2>
+    </div>
+    <div class="grid gap-4 text-lg text-char">
+      {tList(locale, page.intro.paragraphs).map((paragraph) => <p>{paragraph}</p>)}
+      <p>
+        <BookingLink locale={locale} settings={settings} ui={content.ui} placement="intro" variant="text" />
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="mx-auto grid max-w-6xl gap-px bg-line px-4 py-px md:grid-cols-2 md:px-6 lg:grid-cols-4">
+      {
+        page.points.map((point, index) => (
+          <article class="bg-cream px-2 py-10 md:px-6">
+            <p class="font-serif text-4xl text-olive/70">{String(index + 1).padStart(2, "0")}</p>
+            <h2 class="mt-3 font-serif text-2xl text-pine">{t(locale, point.title)}</h2>
+            <p class="mt-3 text-char">{t(locale, point.body)}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-20 md:px-6" data-reveal>
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <h2 class="font-serif text-4xl text-pine">{t(locale, ui.viewGallery)}</h2>
+      <a class={linkClass} href={localePath(locale, "gallery")}>{t(locale, ui.viewGallery)}</a>
+    </div>
+    <div class="mt-8">
+      <Gallery
+        locale={locale}
+        ui={content.ui}
+        photos={content.photos.filter((photo) => photo.featured && photo.file !== settings.heroPhoto)}
+        masonry={false}
+      />
+    </div>
+  </section>
+
+  <section class="bg-sage/50">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 md:px-6 lg:grid-cols-2">
+      <div class="grid gap-4">
+        <Image src={living} alt={t(locale, content.photos.find((item) => item.id === "living")!.alt)} widths={[700, 1200]} sizes="(min-width: 1024px) 50vw, 100vw" class="w-full" />
+        <Image src={dining} alt={t(locale, content.photos.find((item) => item.id === "dining")!.alt)} widths={[700, 1200]} sizes="(min-width: 1024px) 50vw, 100vw" class="w-full" />
+      </div>
+      <div>
+        <h2 class="font-serif text-4xl text-pine">{t(locale, page.living.heading)}</h2>
+        <div class="mt-5 grid gap-4 text-char">
+          {tList(locale, page.living.paragraphs).map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 md:px-6 lg:grid-cols-[1.1fr_0.9fr]">
+    <div>
+      <h2 class="font-serif text-4xl text-pine">{t(locale, page.kitchen.heading)}</h2>
+      <div class="mt-5 grid gap-4 text-char">
+        {tList(locale, page.kitchen.paragraphs).map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <p class="mt-6 flex flex-wrap gap-4">
+        <a class={linkClass} href={localePath(locale, "shabbat")}>{t(locale, ui.viewShabbat)}</a>
+        <BookingLink locale={locale} settings={settings} ui={content.ui} placement="kitchen" variant="text" />
+      </p>
+    </div>
+    <Image src={kitchen} alt={t(locale, content.photos.find((item) => item.id === "kitchen")!.alt)} widths={[700, 1100]} sizes="(min-width: 1024px) 40vw, 100vw" class="w-full" />
+  </section>
+
+  <section class="bg-cream">
+    <div class="mx-auto max-w-6xl px-4 py-20 md:px-6">
+      <h2 class="font-serif text-4xl text-pine">{t(locale, page.sleep.heading)}</h2>
+      <div class="mt-5 grid max-w-3xl gap-4 text-char">
+        {tList(locale, page.sleep.paragraphs).map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      {
+        unpublished?.note && (
+          <Notice locale={locale} label={ui.needsConfirmation} class="mt-8 max-w-3xl">
+            <p>
+              <strong>{t(locale, unpublished.name)}.</strong> {t(locale, unpublished.note)}
+            </p>
+          </Notice>
+        )
+      }
+      <p class="mt-6">
+        <a class={linkClass} href={localePath(locale, "rooms")}>{t(locale, ui.viewRooms)}</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 md:px-6 lg:grid-cols-2">
+    <Image src={pool} alt={t(locale, content.photos.find((item) => item.id === "pool")!.alt)} widths={[800, 1400]} sizes="(min-width: 1024px) 50vw, 100vw" class="w-full" />
+    <div>
+      <p class="text-xs font-semibold tracking-[0.16em] text-olive uppercase">
+        {t(locale, ui.facts.pool)} · {t(locale, settings.pool.seasonLabel)}
+      </p>
+      <h2 class="mt-3 font-serif text-4xl text-pine">{t(locale, page.outdoors.heading)}</h2>
+      <div class="mt-5 grid gap-4 text-char">
+        {tList(locale, page.outdoors.paragraphs).map((paragraph) => <p>{paragraph}</p>)}
+        <p>{t(locale, settings.pool.hoursNote)}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-cream">
+    <div class="mx-auto max-w-6xl px-4 py-20 md:px-6">
+      <h2 class="font-serif text-4xl text-pine">{t(locale, page.reviewsHeading)}</h2>
+      <div class="mt-8">
+        <Reviews locale={locale} content={content} />
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-6xl gap-10 px-4 py-20 md:px-6 lg:grid-cols-2">
+    <div>
+      <h2 class="font-serif text-4xl text-pine">{t(locale, page.location.heading)}</h2>
+      <div class="mt-5 grid gap-4 text-char">
+        {tList(locale, page.location.paragraphs).map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <p class="mt-6">
+        <a class={linkClass} href={localePath(locale, "explore")}>{t(locale, ui.viewExplore)}</a>
+      </p>
+    </div>
+    <AreaMap locale={locale} content={content} note={t(locale, page.location.mapNote)} />
+  </section>
+
+  <section class="bg-sage/40">
+    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-16 md:px-6 lg:grid-cols-[1fr_1fr]">
+      <div>
+        <h2 class="font-serif text-4xl text-pine">{t(locale, page.hostTeaser.heading)}</h2>
+        {tList(locale, page.hostTeaser.paragraphs).map((paragraph) => <p class="mt-4 text-char">{paragraph}</p>)}
+        <p class="mt-6">
+          <a class={linkClass} href={localePath(locale, "host")}>{t(locale, ui.viewHost)}</a>
+        </p>
+      </div>
+      <Rules locale={locale} content={content} />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-20 md:px-6">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <h2 class="font-serif text-4xl text-pine">{t(locale, page.faqHeading)}</h2>
+      <a class={linkClass} href={localePath(locale, "faq")}>{t(locale, ui.viewFaq)}</a>
+    </div>
+    <div class="mt-8">
+      <FaqList locale={locale} faqs={homeFaqs} />
+    </div>
+  </section>
+
+  <section class="bg-pine text-paper">
+    <div class="mx-auto max-w-6xl px-4 py-20 md:px-6">
+      <h2 class="max-w-3xl font-serif text-4xl md:text-5xl">{t(locale, page.final.heading)}</h2>
+      {tList(locale, page.final.paragraphs).map((paragraph) => <p class="mt-4 max-w-2xl text-paper/85">{paragraph}</p>)}
+      <div class="mt-8">
+        <BookingLink
+          locale={locale}
+          settings={settings}
+          ui={content.ui}
+          placement="final"
+          intent="reserve"
+          variant="inverse"
+        />
+      </div>
+    </div>
+  </section>
+</Base>

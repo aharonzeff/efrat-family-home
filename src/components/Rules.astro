@@ -1,0 +1,42 @@
+---
+import { t, type Locale } from "../lib/i18n";
+import type { SiteContent } from "../lib/content";
+
+interface Props {
+  locale: Locale;
+  content: SiteContent;
+}
+const { locale, content } = Astro.props;
+const strings = content.ui as {
+  houseRules: { en: string; he: string };
+  rules: {
+    guests: { en: string; he: string };
+    pets: { en: string; he: string };
+    smoking: { en: string; he: string };
+    parties: { en: string; he: string };
+    quiet: { en: string; he: string };
+    leave: { en: string; he: string };
+  };
+  facts: {
+    checkIn: { en: string; he: string };
+    checkOut: { en: string; he: string };
+  };
+};
+const { rules } = content.settings;
+---
+
+<section class="bg-pine px-6 py-8 text-paper md:px-8">
+  <h2 class="font-serif text-3xl">{t(locale, strings.houseRules)}</h2>
+  <ul class="mt-5 grid gap-3 text-sm sm:grid-cols-2">
+    <li>{t(locale, strings.facts.checkIn)}: {t(locale, rules.checkIn)}</li>
+    <li>{t(locale, strings.facts.checkOut)}: {t(locale, rules.checkOut)}</li>
+    <li>{t(locale, strings.rules.guests)}</li>
+    <li>{t(locale, strings.rules.pets)}</li>
+    <li>{t(locale, strings.rules.smoking)}</li>
+    <li>{t(locale, strings.rules.parties)}</li>
+    <li>
+      {t(locale, strings.rules.quiet)}: {t(locale, rules.quietHours)}
+    </li>
+    <li>{t(locale, strings.rules.leave)}</li>
+  </ul>
+</section>

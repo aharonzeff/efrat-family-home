@@ -1,0 +1,17 @@
+---
+import { t, type Locale } from "../lib/i18n";
+
+interface Props {
+  locale: Locale;
+  label: { en: string; he: string };
+  class?: string;
+}
+const { locale, label, class: className = "" } = Astro.props;
+---
+
+<aside class:list={["placeholder-panel px-5 py-4", className]} role="note">
+  <p class="mb-2 text-xs font-semibold tracking-[0.16em] text-clay uppercase">{t(locale, label)}</p>
+  <div class="text-sm leading-relaxed text-char">
+    <slot />
+  </div>
+</aside>

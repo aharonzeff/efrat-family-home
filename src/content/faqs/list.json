@@ -1,0 +1,270 @@
+{
+  "items": [
+    {
+      "id": "guests",
+      "order": 10,
+      "home": true,
+      "question": {
+        "en": "How many guests can stay?",
+        "he": "כמה אורחים יכולים להתארח?"
+      },
+      "answer": {
+        "en": [
+          "The listing allows 12 guests maximum, in a 7-bedroom, 4-bath house. The headline also says 7 beds. Room-by-room detail is published for six bedrooms only, including floor mattresses in some of them."
+        ],
+        "he": [
+          "ברשימה מותרים עד 12 אורחים, בבית עם 7 חדרי שינה ו-4 חדרי רחצה. בשורת הסיכום כתובות גם 7 מיטות. פירוט לפי חדר פורסם רק לשישה חדרים, ובחלקם מופיעים גם מזרני רצפה."
+        ]
+      }
+    },
+    {
+      "id": "times",
+      "order": 20,
+      "home": true,
+      "question": {
+        "en": "When is check-in and checkout?",
+        "he": "מתי הצ'ק-אין ומתי הצ'ק-אאוט?"
+      },
+      "answer": {
+        "en": [
+          "Check-in is after 3:00 PM. Checkout is before 11:00 AM."
+        ],
+        "he": [
+          "הצ'ק-אין אחרי 15:00. הצ'ק-אאוט לפני 11:00."
+        ]
+      }
+    },
+    {
+      "id": "pool",
+      "order": 30,
+      "home": true,
+      "question": {
+        "en": "Is the pool open all year?",
+        "he": "האם הבריכה פתוחה כל השנה?"
+      },
+      "answer": {
+        "en": [
+          "No. The listing says the pool is seasonal and available May through August. In season it is described as a private outdoor pool, open 24 hours. The photograph shows an above-ground pool in the side yard."
+        ],
+        "he": [
+          "לא. לפי הרשימה הבריכה עונתית וזמינה ממאי עד אוגוסט. בעונה היא מתוארת כבריכה חיצונית פרטית, פתוחה 24 שעות. בתמונה רואים בריכה מעל הקרקע בחצר הצדדית."
+        ]
+      }
+    },
+    {
+      "id": "shabbat",
+      "order": 40,
+      "home": true,
+      "question": {
+        "en": "What makes a Shabbat stay practical here?",
+        "he": "מה הופך אירוח שבת למעשי כאן?"
+      },
+      "answer": {
+        "en": [
+          "The listing describes a kosher kitchen, a hot plate, an urn, a large dining area, and nearby synagogues, in a quiet modern Orthodox neighborhood. It does not name a kosher certification, an eruv, particular synagogues, or service times."
+        ],
+        "he": [
+          "הרשימה מתארת מטבח כשר, פלטת שבת, מיחם, פינת אוכל גדולה ובתי כנסת בקרבת מקום, בשכונה אורתודוקסית מודרנית שקטה. לא מצוינים גוף כשרות, עירוב, שמות בתי כנסת או זמני תפילה."
+        ]
+      }
+    },
+    {
+      "id": "price",
+      "order": 50,
+      "home": true,
+      "question": {
+        "en": "Where are prices, the minimum stay, availability, and the cancellation policy?",
+        "he": "איפה המחיר, מינימום הלילות, הזמינות ומדיניות הביטול?"
+      },
+      "answer": {
+        "en": [
+          "On Airbnb, for the dates you choose. They are not fixed on this website, and the listing did not show a cancellation policy without trip dates. Use Check Availability on Airbnb or Reserve on Airbnb."
+        ],
+        "he": [
+          "ב-Airbnb, לפי התאריכים שתבחרו. הם לא קבועים באתר הזה, ומדיניות הביטול לא הופיעה ברשימה בלי תאריכי נסיעה. השתמשו ב״בדקו זמינות ב-Airbnb״ או ב״הזמינו ב-Airbnb״."
+        ]
+      }
+    },
+    {
+      "id": "parties",
+      "order": 60,
+      "home": false,
+      "question": {
+        "en": "Can we host a party or an event?",
+        "he": "אפשר לערוך מסיבה או אירוע?"
+      },
+      "answer": {
+        "en": [
+          "No. The house rules say no parties or events. It is a quiet residential street, and quiet hours are 11:00 PM to 7:00 AM."
+        ],
+        "he": [
+          "לא. כללי הבית אוסרים מסיבות ואירועים. זה רחוב מגורים שקט, ושעות השקט הן 23:00 עד 7:00."
+        ]
+      }
+    },
+    {
+      "id": "pets-smoking",
+      "order": 70,
+      "home": false,
+      "question": {
+        "en": "Are pets or smoking allowed?",
+        "he": "מותרים בעלי חיים או עישון?"
+      },
+      "answer": {
+        "en": ["No pets. No smoking."],
+        "he": ["אין כניסה לבעלי חיים. אין עישון."]
+      }
+    },
+    {
+      "id": "access",
+      "order": 80,
+      "home": false,
+      "question": {
+        "en": "Which parts of the house do guests use?",
+        "he": "לאילו חלקים בבית יש לאורחים גישה?"
+      },
+      "answer": {
+        "en": [
+          "Guests have the whole house: bedrooms, bathrooms, kitchen, living and dining areas, balcony, yard, pool, and barbecue. The laundry room with washer and dryer is available, and EV charging is in the driveway. A few closets or storage areas may stay locked for the family’s belongings."
+        ],
+        "he": [
+          "לאורחים יש את כל הבית: חדרי שינה, חדרי רחצה, מטבח, סלון ופינת אוכל, מרפסת, חצר, בריכה ומנגל. חדר הכביסה עם מכונה ומייבש זמין, וטעינת רכב חשמלי נמצאת בחניה. ייתכנו כמה ארונות או מחסנים נעולים לחפצים של המשפחה."
+        ]
+      }
+    },
+    {
+      "id": "parking",
+      "order": 90,
+      "home": false,
+      "question": {
+        "en": "Is there parking?",
+        "he": "יש חניה?"
+      },
+      "answer": {
+        "en": [
+          "The listing includes free parking on the premises, free street parking, and also paid parking on the premises, plus an EV charger. It is in a gated community. The listing does not explain when parking is free and when it is paid, so confirm on Airbnb if that difference matters for your stay."
+        ],
+        "he": [
+          "ברשימה מופיעות חניה חינם במתחם, חניה חינם ברחוב, וגם חניה בתשלום במתחם, וכן עמדת טעינה לרכב חשמלי. הבית ביישוב עם שער. הרשימה לא מסבירה מתי החניה חינם ומתי בתשלום, אז אם ההבדל חשוב לשהייה כדאי לוודא ב-Airbnb."
+        ]
+      }
+    },
+    {
+      "id": "wifi",
+      "order": 100,
+      "home": false,
+      "question": {
+        "en": "Is there Wi-Fi and a place to work?",
+        "he": "יש אינטרנט אלחוטי ומקום לעבוד?"
+      },
+      "answer": {
+        "en": [
+          "Yes. The listing includes Wi-Fi, described in the introduction as fast, plus Ethernet, and a dedicated workspace."
+        ],
+        "he": [
+          "כן. ברשימה יש אינטרנט אלחוטי, המתואר במבוא כמהיר, וגם חיבור רשת קווי ועמדת עבודה ייעודית."
+        ]
+      }
+    },
+    {
+      "id": "kitchen",
+      "order": 110,
+      "home": false,
+      "question": {
+        "en": "Is the kitchen kosher, and can we cook?",
+        "he": "האם המטבח כשר, ואפשר לבשל?"
+      },
+      "answer": {
+        "en": [
+          "The listing calls it a kosher kitchen and says guests can cook their own meals. It lists a refrigerator, freezer, stove, oven, microwave, dishwasher, kettle, coffee maker, and the usual pots, pans, and dishes. A hot plate and an urn are mentioned for Shabbat. No certification body is named."
+        ],
+        "he": [
+          "הרשימה קוראת לזה מטבח כשר ומציינת שאורחים יכולים לבשל בעצמם. יש מקרר, מקפיא, כיריים, תנור, מיקרוגל, מדיח, קומקום, מכונת קפה, וסירים, מחבתות וכלים. פלטת שבת ומיחם מוזכרים לקראת שבת. לא מצוין גוף כשרות."
+        ]
+      }
+    },
+    {
+      "id": "heat-water",
+      "order": 120,
+      "home": false,
+      "question": {
+        "en": "Are heating and hot water listed?",
+        "he": "האם חימום ומים חמים מופיעים ברשימה?"
+      },
+      "answer": {
+        "en": [
+          "Airbnb lists air conditioning and a ceiling fan. It lists heating and hot water under “Not included,” along with exterior security cameras. That may be an incomplete checkbox rather than a description of the taps. Confirm on the listing or with Aharon before you rely on it. This site does not add amenities that are not on the listing."
+        ],
+        "he": [
+          "ב-Airbnb מופיעים מיזוג אוויר ומאוורר תקרה. חימום ומים חמים מופיעים תחת ״לא כלול״, יחד עם מצלמות אבטחה חיצוניות. ייתכן שזו תיבה שלא סומנה, ולא תיאור של הברזים. כדאי לוודא ברשימה או מול אהרן לפני שמסתמכים על זה. האתר לא מוסיף מתקנים שאינם ברשימה."
+        ]
+      }
+    },
+    {
+      "id": "address",
+      "order": 130,
+      "home": false,
+      "question": {
+        "en": "Where is the house, exactly?",
+        "he": "איפה הבית בדיוק?"
+      },
+      "answer": {
+        "en": [
+          "In Efrat, Gush Etzion, about 20 minutes from Jerusalem, on a quiet residential street in a modern Orthodox neighborhood. The precise address is shared through Airbnb, not on this site. A guest in August 2026 wrote that a supermarket is a three-minute walk away. The listing does not name the store."
+        ],
+        "he": [
+          "באפרת, גוש עציון, כ-20 דקות מירושלים, ברחוב מגורים שקט בשכונה אורתודוקסית מודרנית. הכתובת המדויקת נמסרת דרך Airbnb, לא באתר הזה. אורח באוגוסט 2026 כתב שסופרמרקט נמצא במרחק הליכה של כשלוש דקות. שם החנות לא מופיע ברשימה."
+        ]
+      }
+    },
+    {
+      "id": "kids",
+      "order": 140,
+      "home": false,
+      "question": {
+        "en": "Does the house work for children and grandparents?",
+        "he": "האם הבית מתאים לילדים ולסבים?"
+      },
+      "answer": {
+        "en": [
+          "The listing is written for large families and multi-generational groups. All three published reviews mention staying with kids. There are board games, an Xbox One, arcade games, books, a backyard, and a seasonal pool. Some rooms include a floor mattress beside a bed.",
+          "A crib, high chair, and step-free access are not listed. The entry photographs show a staircase. Ask Aharon on Airbnb if you need a specific setup."
+        ],
+        "he": [
+          "הרשימה פונה למשפחות גדולות ולקבוצות רב-דוריות. בשלוש הביקורות שפורסמו מוזכרת שהייה עם ילדים. יש משחקי קופסה, Xbox One, משחקי ארקייד, ספרים, חצר ובריכה עונתית. בחלק מהחדרים יש מזרן רצפה ליד המיטה.",
+          "מיטת תינוק, כיסא אוכל ונגישות בלי מדרגות לא מופיעים ברשימה. בתמונות הכניסה רואים גרם מדרגות. אם צריך סידור מסוים, כדאי לשאול את אהרן ב-Airbnb."
+        ]
+      }
+    },
+    {
+      "id": "host",
+      "order": 150,
+      "home": false,
+      "question": {
+        "en": "Who is the host, and how quickly does he reply?",
+        "he": "מי המארח, ותוך כמה זמן הוא עונה?"
+      },
+      "answer": {
+        "en": [
+          "Aharon lives in Efrat and speaks English and Hebrew. The listing shows a 100% response rate and replies within an hour. Guests’ reviews spell his name Aaron. He has hosted for 9 years. The profile shows 7 reviews and a 5.0 rating; this listing shows 3 reviews. No Superhost badge is shown, and no host biography or photo was published on the listing we used."
+        ],
+        "he": [
+          "אהרן גר באפרת ודובר אנגלית ועברית. ברשימה מופיעים שיעור מענה של 100% ומענה בתוך שעה. בביקורות השם נכתב Aaron. הוא מארח כבר 9 שנים. בפרופיל מופיעות 7 ביקורות ודירוג 5.0; ברשימה הזו מופיעות 3 ביקורות. לא מוצג תג Superhost, וברשימה ששימשה אותנו לא פורסמו ביוגרפיה או תמונה של המארח."
+        ]
+      }
+    },
+    {
+      "id": "leave",
+      "order": 160,
+      "home": false,
+      "question": {
+        "en": "What should we do before leaving?",
+        "he": "מה עושים לפני שיוצאים?"
+      },
+      "answer": {
+        "en": ["Throw the trash away, turn things off, and return the keys."],
+        "he": ["לזרוק את הזבל, לכבות את מה שהודלק, ולהחזיר את המפתחות."]
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+import BookingLink from "../components/BookingLink.astro";
+import Notice from "../components/Notice.astro";
+import Base from "../layouts/Base.astro";
+import { loadContent } from "../lib/content";
+import { t, tList, type Locale } from "../lib/i18n";
+import { resolvePhoto } from "../lib/photos";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const content = await loadContent();
+const page = content.pages.shabbat as {
+  seo: { title: { en: string; he: string }; description: { en: string; he: string } };
+  kicker: { en: string; he: string };
+  heading: { en: string; he: string };
+  intro: { en: string[]; he: string[] };
+  confirmed: {
+    heading: { en: string; he: string };
+    items: { title: { en: string; he: string }; body: { en: string; he: string } }[];
+  };
+  notListed: { heading: { en: string; he: string }; paragraphs: { en: string[]; he: string[] } };
+};
+const ui = content.ui as { needsConfirmation: { en: string; he: string } };
+const dining = resolvePhoto("14-dining.jpg");
+const kitchen = resolvePhoto("01-kitchen.jpg");
+---
+
+<Base locale={locale} page="shabbat" title={t(locale, page.seo.title)} description={t(locale, page.seo.description)}>
+  <header class="mx-auto max-w-6xl px-4 pt-16 md:px-6">
+    <div class="stone-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <p class="mt-6 text-xs font-semibold tracking-[0.16em] text-olive uppercase">
+      {t(locale, page.kicker)}
+    </p>
+    <h1 class="mt-3 max-w-3xl font-serif text-4xl text-pine md:text-6xl">{t(locale, page.heading)}</h1>
+    <div class="mt-6 grid max-w-3xl gap-4 text-lg text-char">
+      {tList(locale, page.intro).map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+  </header>
+
+  <div class="mx-auto grid max-w-6xl gap-4 px-4 py-12 md:grid-cols-2 md:px-6">
+    <Image src={dining} alt={t(locale, content.photos.find((item) => item.id === "dining")!.alt)} widths={[800, 1200]} sizes="(min-width: 768px) 50vw, 100vw" class="h-full w-full object-cover" />
+    <Image src={kitchen} alt={t(locale, content.photos.find((item) => item.id === "kitchen")!.alt)} widths={[800, 1200]} sizes="(min-width: 768px) 50vw, 100vw" class="h-full w-full object-cover" />
+  </div>
+
+  <section class="mx-auto max-w-6xl px-4 pb-8 md:px-6">
+    <h2 class="font-serif text-4xl text-pine">{t(locale, page.confirmed.heading)}</h2>
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+      {
+        page.confirmed.items.map((item) => (
+          <article class="border-t-4 border-olive bg-cream p-6">
+            <h3 class="font-serif text-2xl">{t(locale, item.title)}</h3>
+            <p class="mt-3 text-char">{t(locale, item.body)}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-12 md:px-6">
+    <h2 class="font-serif text-4xl text-pine">{t(locale, page.notListed.heading)}</h2>
+    <Notice locale={locale} label={ui.needsConfirmation} class="mt-6 max-w-3xl">
+      <div class="grid gap-3">
+        {tList(locale, page.notListed.paragraphs).map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </Notice>
+    <div class="mt-8">
+      <BookingLink locale={locale} settings={content.settings} ui={content.ui} placement="shabbat" intent="reserve" />
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,57 @@
+---
+import Amenities from "../components/Amenities.astro";
+import BookingLink from "../components/BookingLink.astro";
+import FaqList from "../components/FaqList.astro";
+import Rules from "../components/Rules.astro";
+import Base from "../layouts/Base.astro";
+import { loadContent } from "../lib/content";
+import { t, tList, type Locale } from "../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const content = await loadContent();
+const includedCount = content.amenities
+  .filter((group) => group.included)
+  .reduce((count, group) => count + group.items.length, 0);
+const page = content.pages.faq as {
+  seo: { title: { en: string; he: string }; description: { en: string; he: string } };
+  heading: { en: string; he: string };
+  intro: { en: string[]; he: string[] };
+};
+---
+
+<Base locale={locale} page="faq" title={t(locale, page.seo.title)} description={t(locale, page.seo.description)}>
+  <header class="mx-auto max-w-6xl px-4 pt-16 md:px-6">
+    <div class="stone-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <h1 class="mt-6 max-w-3xl font-serif text-4xl text-pine md:text-6xl">{t(locale, page.heading)}</h1>
+    <div class="mt-6 grid max-w-3xl gap-4 text-lg text-char">
+      {tList(locale, page.intro).map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    <div class="mt-8">
+      <BookingLink locale={locale} settings={content.settings} ui={content.ui} placement="faq" intent="availability" />
+    </div>
+  </header>
+  <div class="mx-auto max-w-6xl px-4 py-12 md:px-6">
+    <FaqList locale={locale} faqs={content.faqs} />
+  </div>
+  <div class="mx-auto max-w-6xl px-4 pb-8 md:px-6">
+    <Rules locale={locale} content={content} />
+  </div>
+  <section class="mx-auto max-w-6xl px-4 py-16 md:px-6">
+    <h2 class="font-serif text-4xl text-pine">
+      {locale === "he" ? `כל ${includedCount} המתקנים` : `All ${includedCount} amenities`}
+    </h2>
+    <p class="mt-3 max-w-3xl text-char">
+      {
+        locale === "he"
+          ? "הרשימה למטה היא רשימת Airbnb, כולל מה שסומן כלא כלול. לא הוספנו שורה שלא הייתה שם."
+          : "The list below is Airbnb’s list, including what was marked not included. Nothing was added that was not there."
+      }
+    </p>
+    <div class="mt-8">
+      <Amenities locale={locale} content={content} />
+    </div>
+  </section>
+</Base>

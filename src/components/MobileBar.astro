@@ -1,0 +1,22 @@
+---
+import BookingLink from "./BookingLink.astro";
+import type { SiteContent } from "../lib/content";
+import type { Locale } from "../lib/i18n";
+
+interface Props {
+  locale: Locale;
+  content: SiteContent;
+}
+const { locale, content } = Astro.props;
+---
+
+<div class="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-paper/95 p-3 backdrop-blur md:hidden">
+  <BookingLink
+    locale={locale}
+    settings={content.settings}
+    ui={content.ui}
+    placement="mobile-bar"
+    intent="availability"
+    class="w-full"
+  />
+</div>

@@ -1,0 +1,102 @@
+{
+  "brandName": {
+    "en": "Beit Sela",
+    "he": "בית סלע"
+  },
+  "siteUrl": "https://beit-sela.pages.dev",
+  "booking": {
+    "url": "https://www.airbnb.com/rooms/1693268518838992564",
+    "utm": {
+      "utm_source": "beitsela",
+      "utm_medium": "website",
+      "utm_campaign": "airbnb"
+    },
+    "placements": [
+      "nav",
+      "mobile-bar",
+      "hero-availability",
+      "hero-reserve",
+      "intro",
+      "living",
+      "kitchen",
+      "rooms",
+      "outdoors",
+      "reviews",
+      "location",
+      "host",
+      "host-contact",
+      "faq",
+      "final",
+      "gallery",
+      "shabbat",
+      "explore",
+      "footer",
+      "404",
+      "schema"
+    ]
+  },
+  "analytics": {
+    "cloudflareToken": "",
+    "endpoint": ""
+  },
+  "pool": {
+    "seasonal": true,
+    "openMonths": [5, 6, 7, 8],
+    "seasonLabel": {
+      "en": "May through August",
+      "he": "מאי עד אוגוסט"
+    },
+    "hoursNote": {
+      "en": "During those months the listing describes the pool as private, outdoors, and open 24 hours.",
+      "he": "בחודשים האלה הרשימה מתארת בריכה פרטית חיצונית הפתוחה 24 שעות."
+    }
+  },
+  "listing": {
+    "airbnbId": "1693268518838992564",
+    "guests": 12,
+    "bedrooms": 7,
+    "bedsHeadline": 7,
+    "baths": 4,
+    "publishedBedroomCount": 6,
+    "ratingValue": 5,
+    "reviewCount": 3,
+    "ratingAsOf": "2026-10",
+    "hostingYears": 9,
+    "hostReviewCount": 7,
+    "hostRatingValue": 5,
+    "responseRate": "100%",
+    "locality": {
+      "en": "Efrat",
+      "he": "אפרת"
+    },
+    "region": {
+      "en": "Gush Etzion",
+      "he": "גוש עציון"
+    },
+    "country": "IL",
+    "jerusalemDrive": {
+      "en": "about 20 minutes from Jerusalem",
+      "he": "כ-20 דקות מירושלים"
+    }
+  },
+  "rules": {
+    "checkIn": {
+      "en": "After 3:00 PM",
+      "he": "אחרי 15:00"
+    },
+    "checkOut": {
+      "en": "Before 11:00 AM",
+      "he": "לפני 11:00"
+    },
+    "quietHours": {
+      "en": "11:00 PM – 7:00 AM",
+      "he": "23:00–7:00"
+    }
+  },
+  "map": {
+    "bbox": "35.125,31.628,35.175,31.678",
+    "openStreetMap": "https://www.openstreetmap.org/#map=13/31.653/35.150"
+  },
+  "heroPhoto": "15-balcony.jpg",
+  "ogImage": "/og/home.jpg"
+}

@@ -1,0 +1,28 @@
+---
+import BookingLink from "../components/BookingLink.astro";
+import Base from "../layouts/Base.astro";
+import { loadContent } from "../lib/content";
+import { localePath } from "../lib/i18n";
+
+const content = await loadContent();
+---
+
+<Base
+  locale="en"
+  page="home"
+  noindex
+  title="Page not found | Beit Sela"
+  description="This page is not part of the Beit Sela site. Return home or check availability on Airbnb."
+>
+  <section class="mx-auto max-w-3xl px-4 py-24 md:px-6">
+    <div class="stone-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <h1 class="mt-6 font-serif text-5xl text-pine">This page is not here.</h1>
+    <p class="mt-4 text-lg text-char">The house is. Start again in English or Hebrew.</p>
+    <p class="mt-4 font-serif text-3xl" lang="he" dir="rtl">העמוד הזה לא נמצא. הבית כן.</p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a class="border border-pine px-4 py-3 text-sm font-semibold" href={localePath("en", "home")}>Home</a>
+      <a class="border border-pine px-4 py-3 text-sm font-semibold" href={localePath("he", "home")} lang="he">עברית</a>
+      <BookingLink locale="en" settings={content.settings} ui={content.ui} placement="404" />
+    </div>
+  </section>
+</Base>

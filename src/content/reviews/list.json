@@ -1,0 +1,45 @@
+{
+  "sourceNote": {
+    "en": "These are Airbnb’s English automatic translations of reviews written in Hebrew. Each one is shown with a first name and the month and year. For the Hebrew originals and anything posted since, use the listing.",
+    "he": "הביקורות נכתבו במקור בעברית. כאן מופיע התרגום האוטומטי של Airbnb לאנגלית, עם שם פרטי וחודש בלבד. את המקור העברי וכל ביקורת חדשה יותר אפשר לקרוא ברשימה."
+  },
+  "linkLabel": {
+    "en": "Read the latest reviews on Airbnb",
+    "he": "לקריאת הביקורות העדכניות ב-Airbnb"
+  },
+  "items": [
+    {
+      "id": "hila",
+      "name": { "en": "Hila", "he": "הילה" },
+      "dateLabel": { "en": "August 2026", "he": "אוגוסט 2026" },
+      "datePublished": "2026-08",
+      "context": { "en": "Stayed with kids", "he": "שהתה עם ילדים" },
+      "quote": {
+        "en": "It was just fun. A house in an excellent location, inviting and very pleasant to be in. The landlords are kind and available. We are really happy that we got to stay at their place.",
+        "he": "It was just fun. A house in an excellent location, inviting and very pleasant to be in. The landlords are kind and available. We are really happy that we got to stay at their place."
+      }
+    },
+    {
+      "id": "asher",
+      "name": { "en": "Asher", "he": "Asher" },
+      "dateLabel": { "en": "August 2026", "he": "אוגוסט 2026" },
+      "datePublished": "2026-08",
+      "context": { "en": "Stayed with kids", "he": "שהה עם ילדים" },
+      "quote": {
+        "en": "We had a wonderful stay. Aaron's place is inviting, cozy and indulgent. The house is sparkling clean and everything is accessible. This is the great advantage of a house where you live and not a house that is intended only for rentals. We had everything there. The kids were in the well-maintained pool, playing X-box, and the whole family sat around the table with board games from the house. BBQ grill in the yard, fully equipped kitchen, coffee machine, ice machine, cold water. A supermarket is a 3-minute walk away. Aaron was available and attentive to any questions we had. We are definitely going back there.",
+        "he": "We had a wonderful stay. Aaron's place is inviting, cozy and indulgent. The house is sparkling clean and everything is accessible. This is the great advantage of a house where you live and not a house that is intended only for rentals. We had everything there. The kids were in the well-maintained pool, playing X-box, and the whole family sat around the table with board games from the house. BBQ grill in the yard, fully equipped kitchen, coffee machine, ice machine, cold water. A supermarket is a 3-minute walk away. Aaron was available and attentive to any questions we had. We are definitely going back there."
+      }
+    },
+    {
+      "id": "yoav",
+      "name": { "en": "Yoav", "he": "יואב" },
+      "dateLabel": { "en": "June 2026", "he": "יוני 2026" },
+      "datePublished": "2026-06",
+      "context": { "en": "Stayed with kids", "he": "שהה עם ילדים" },
+      "quote": {
+        "en": "It was a really great place. We came for a family Shabbat, and it was very successful. Some of the family members are already planning another family Shabbat there.",
+        "he": "It was a really great place. We came for a family Shabbat, and it was very successful. Some of the family members are already planning another family Shabbat there."
+      }
+    }
+  ]
+}

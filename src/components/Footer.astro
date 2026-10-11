@@ -1,0 +1,57 @@
+---
+import BookingLink from "./BookingLink.astro";
+import StoneMark from "./StoneMark.astro";
+import type { SiteContent } from "../lib/content";
+import { localePath, pages, t, type Locale, type PageId } from "../lib/i18n";
+
+interface Props {
+  locale: Locale;
+  content: SiteContent;
+}
+const { locale, content } = Astro.props;
+const { settings, ui } = content;
+const strings = ui as {
+  nav: Record<PageId, { en: string; he: string }>;
+  footerNote: { en: string; he: string };
+  footerPhotos: { en: string; he: string };
+  rights: { en: string; he: string };
+};
+---
+
+<footer class="border-t border-line bg-cream">
+  <div class="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:px-6 lg:grid-cols-[1.3fr_1fr_1fr]">
+    <div>
+      <div class="flex items-center gap-3 text-pine">
+        <StoneMark />
+        <p class="font-serif text-3xl">{t(locale, settings.brandName)}</p>
+      </div>
+      <p class="mt-4 max-w-sm text-sm leading-relaxed text-char">{t(locale, strings.footerNote)}</p>
+      <div class="mt-6">
+        <BookingLink locale={locale} settings={settings} ui={ui} placement="footer" intent="reserve" />
+      </div>
+    </div>
+    <nav aria-label="Footer">
+      <ul class="grid gap-2 text-sm">
+        {
+          pages.map((item) => (
+            <li>
+              <a class="hover:text-clay" href={localePath(locale, item)}>
+                {t(locale, strings.nav[item])}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <div class="text-sm leading-relaxed text-char">
+      <p>
+        {t(locale, settings.listing.locality)}, {t(locale, settings.listing.region)}
+      </p>
+      <p class="mt-2">{t(locale, settings.listing.jerusalemDrive)}</p>
+      <p class="mt-4">{t(locale, strings.footerPhotos)}</p>
+    </div>
+  </div>
+  <div class="border-t border-line/80 px-4 py-4 text-center text-xs text-char md:px-6">
+    <p>© {new Date().getFullYear()} {t(locale, strings.rights)}</p>
+  </div>
+</footer>

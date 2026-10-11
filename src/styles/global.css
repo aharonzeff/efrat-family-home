@@ -1,0 +1,198 @@
+@import "tailwindcss";
+@import "@fontsource-variable/fraunces/wght.css";
+@import "@fontsource-variable/fraunces/wght-italic.css";
+@import "@fontsource-variable/source-sans-3/wght.css";
+@import "@fontsource-variable/heebo/wght.css";
+@import "@fontsource/frank-ruhl-libre/latin-500.css";
+@import "@fontsource/frank-ruhl-libre/latin-700.css";
+@import "@fontsource/frank-ruhl-libre/hebrew-500.css";
+@import "@fontsource/frank-ruhl-libre/hebrew-700.css";
+
+@theme {
+  --font-serif: "Fraunces", "Frank Ruhl Libre", "Times New Roman", serif;
+  --font-sans: "Source Sans 3", "Heebo", "Arial", sans-serif;
+  --color-paper: #f7f4ee;
+  --color-cream: #efe6d6;
+  --color-stone: #e3d5c3;
+  --color-sand: #cbbba4;
+  --color-olive: #4d5b42;
+  --color-pine: #243026;
+  --color-sage: #e3eadc;
+  --color-clay: #8d4f3c;
+  --color-ink: #241f1a;
+  --color-char: #3e382f;
+  --color-line: #d9cebf;
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  html[lang="he"] {
+    --font-serif: "Frank Ruhl Libre", "Times New Roman", serif;
+    --font-sans: "Heebo", "Arial", sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+  }
+
+  html[lang="he"] body {
+    line-height: 1.75;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 560;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+  }
+
+  html[lang="he"] :is(h1, h2, h3) {
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-clay);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-sage);
+    color: var(--color-ink);
+  }
+
+  summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [data-reveal] {
+    animation: rise 0.7s ease both;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.stone-rule {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.stone-rule span {
+  display: block;
+  height: 0.42rem;
+}
+
+.stone-rule span:nth-child(1) {
+  width: 1.8rem;
+  background: var(--color-olive);
+}
+
+.stone-rule span:nth-child(2) {
+  width: 3rem;
+  background: var(--color-sand);
+}
+
+.stone-rule span:nth-child(3) {
+  width: 1.15rem;
+  background: var(--color-clay);
+}
+
+.stone-rule span:nth-child(4) {
+  width: 2.4rem;
+  background: var(--color-pine);
+}
+
+.masonry {
+  columns: 1;
+  column-gap: 1rem;
+}
+
+.masonry article {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .masonry {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry {
+    columns: 3;
+  }
+}
+
+.placeholder-panel {
+  border: 1.5px dashed var(--color-clay);
+  background: color-mix(in srgb, var(--color-cream) 70%, white);
+}
+
+#lightbox {
+  width: min(1080px, calc(100vw - 1.5rem));
+  max-height: calc(100vh - 1.5rem);
+  padding: 0;
+  border: 0;
+  background: var(--color-pine);
+  color: var(--color-paper);
+}
+
+#lightbox::backdrop {
+  background: rgb(20 18 16 / 0.82);
+}
+
+#lightbox img {
+  width: 100%;
+  max-height: min(78vh, 820px);
+  object-fit: contain;
+  background: #1a1916;
+}

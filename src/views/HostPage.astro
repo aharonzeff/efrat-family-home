@@ -1,0 +1,83 @@
+---
+import BookingLink from "../components/BookingLink.astro";
+import Notice from "../components/Notice.astro";
+import StoneMark from "../components/StoneMark.astro";
+import Base from "../layouts/Base.astro";
+import { loadContent } from "../lib/content";
+import { t, tList, type Locale } from "../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const content = await loadContent();
+const page = content.pages.host as {
+  seo: { title: { en: string; he: string }; description: { en: string; he: string } };
+  heading: { en: string; he: string };
+  intro: { en: string[]; he: string[] };
+  photoPlaceholder: { en: string; he: string };
+  bioPlaceholder: { en: string; he: string };
+  family: { en: string; he: string };
+};
+const ui = content.ui as {
+  needsConfirmation: { en: string; he: string };
+  contact: { en: string; he: string };
+};
+const { settings } = content;
+const facts = [
+  { label: locale === "he" ? "גר ב" : "Lives in", value: t(locale, settings.listing.locality) },
+  { label: locale === "he" ? "שפות" : "Languages", value: locale === "he" ? "אנגלית ועברית" : "English and Hebrew" },
+  { label: locale === "he" ? "מענה" : "Response", value: locale === "he" ? "בתוך שעה" : "Within an hour" },
+  { label: locale === "he" ? "שיעור מענה" : "Response rate", value: settings.listing.responseRate },
+  { label: locale === "he" ? "שנות אירוח" : "Years hosting", value: String(settings.listing.hostingYears) },
+  {
+    label: locale === "he" ? "דירוג הפרופיל" : "Profile rating",
+    value: `${settings.listing.hostRatingValue.toFixed(1)} · ${settings.listing.hostReviewCount}`,
+  },
+];
+---
+
+<Base locale={locale} page="host" title={t(locale, page.seo.title)} description={t(locale, page.seo.description)}>
+  <header class="mx-auto grid max-w-6xl gap-10 px-4 pt-16 md:px-6 lg:grid-cols-[0.8fr_1.2fr]">
+    <Notice locale={locale} label={ui.needsConfirmation} class="flex min-h-72 flex-col items-start justify-end">
+      <StoneMark class="mb-6 h-14 w-14" />
+      <p>{t(locale, page.photoPlaceholder)}</p>
+    </Notice>
+    <div>
+      <div class="stone-rule" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <h1 class="mt-6 font-serif text-4xl text-pine md:text-6xl">{t(locale, page.heading)}</h1>
+      <div class="mt-6 grid gap-4 text-lg text-char">
+        {tList(locale, page.intro).map((paragraph) => <p>{paragraph}</p>)}
+        <p>{t(locale, page.family)}</p>
+      </div>
+    </div>
+  </header>
+
+  <dl class="mx-auto mt-12 grid max-w-6xl gap-px bg-line px-4 sm:grid-cols-2 lg:grid-cols-3 md:px-6">
+    {
+      facts.map((fact) => (
+        <div class="bg-paper px-4 py-5">
+          <dt class="text-xs tracking-wide text-char uppercase">{fact.label}</dt>
+          <dd class="mt-1 font-serif text-2xl text-pine">{fact.value}</dd>
+        </div>
+      ))
+    }
+  </dl>
+
+  <div class="mx-auto max-w-6xl px-4 py-12 md:px-6">
+    <Notice locale={locale} label={ui.needsConfirmation} class="max-w-3xl">
+      <p>{t(locale, page.bioPlaceholder)}</p>
+    </Notice>
+    <div class="mt-8">
+      <BookingLink
+        locale={locale}
+        settings={settings}
+        ui={content.ui}
+        placement="host-contact"
+        label={ui.contact}
+        intent="availability"
+        track="contact_click"
+      />
+    </div>
+  </div>
+</Base>

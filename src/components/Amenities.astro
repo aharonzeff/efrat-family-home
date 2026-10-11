@@ -1,0 +1,42 @@
+---
+import { t, type Locale } from "../lib/i18n";
+import type { SiteContent } from "../lib/content";
+
+interface Props {
+  locale: Locale;
+  content: SiteContent;
+}
+const { locale, content } = Astro.props;
+const { amenities, settings, ui } = content;
+const strings = ui as {
+  included: { en: string; he: string };
+  notIncluded: { en: string; he: string };
+};
+---
+
+<div class="grid gap-10">
+  {
+    amenities.map((group) => (
+      <section>
+        <h3 class="font-serif text-2xl text-pine">
+          {t(locale, group.title)}
+          <span class="ms-2 align-middle font-sans text-xs font-semibold tracking-wide text-clay uppercase">
+            {group.included ? t(locale, strings.included) : t(locale, strings.notIncluded)}
+          </span>
+        </h3>
+        <ul class="mt-4 grid gap-2 sm:grid-cols-2">
+          {group.items.map((item) => (
+            <li class:list={["border border-line bg-paper px-3 py-2 text-sm", !group.included && "border-dashed"]}>
+              {t(locale, item.name)}
+              {item.noteKey === "pool" && (
+                <span class="mt-1 block text-char">
+                  {t(locale, settings.pool.seasonLabel)}. {t(locale, settings.pool.hoursNote)}
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</div>

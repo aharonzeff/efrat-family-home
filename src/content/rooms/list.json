@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "id": "bedroom-1",
+      "published": true,
+      "name": { "en": "Bedroom 1", "he": "חדר שינה 1" },
+      "beds": [
+        { "count": 1, "label": { "en": "Sofa bed", "he": "ספת מיטה" } }
+      ]
+    },
+    {
+      "id": "bedroom-2",
+      "published": true,
+      "name": { "en": "Bedroom 2", "he": "חדר שינה 2" },
+      "beds": [
+        { "count": 1, "label": { "en": "Single bed", "he": "מיטת יחיד" } },
+        { "count": 1, "label": { "en": "Floor mattress", "he": "מזרן רצפה" } }
+      ]
+    },
+    {
+      "id": "bedroom-3",
+      "published": true,
+      "name": { "en": "Bedroom 3", "he": "חדר שינה 3" },
+      "beds": [
+        { "count": 1, "label": { "en": "Single bed", "he": "מיטת יחיד" } },
+        { "count": 1, "label": { "en": "Floor mattress", "he": "מזרן רצפה" } }
+      ]
+    },
+    {
+      "id": "bedroom-4",
+      "published": true,
+      "name": { "en": "Bedroom 4", "he": "חדר שינה 4" },
+      "beds": [
+        { "count": 2, "label": { "en": "Single bed", "he": "מיטת יחיד" } }
+      ]
+    },
+    {
+      "id": "bedroom-5",
+      "published": true,
+      "name": { "en": "Bedroom 5", "he": "חדר שינה 5" },
+      "beds": [
+        { "count": 1, "label": { "en": "Double bed", "he": "מיטה זוגית" } },
+        { "count": 1, "label": { "en": "Floor mattress", "he": "מזרן רצפה" } }
+      ]
+    },
+    {
+      "id": "bedroom-6",
+      "published": true,
+      "name": { "en": "Bedroom 6", "he": "חדר שינה 6" },
+      "beds": [
+        { "count": 1, "label": { "en": "Double bed", "he": "מיטה זוגית" } },
+        { "count": 1, "label": { "en": "Floor mattress", "he": "מזרן רצפה" } }
+      ]
+    },
+    {
+      "id": "bedroom-7",
+      "published": false,
+      "name": { "en": "Bedroom 7", "he": "חדר שינה 7" },
+      "beds": [],
+      "note": {
+        "en": "Airbnb’s summary says 7 bedrooms and 7 beds, but the room-by-room list shows only six bedrooms. The bed setup for this seventh room is not published. We have not guessed it.",
+        "he": "בסיכום של Airbnb מופיעים 7 חדרי שינה ו-7 מיטות, אבל פירוט החדרים מציג רק שישה. סידור המיטות בחדר השביעי לא פורסם. לא ניחשנו אותו."
+      }
+    }
+  ]
+}

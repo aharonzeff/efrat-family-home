@@ -1,0 +1,23 @@
+{
+  "seo": {
+    "title": {
+      "en": "Photo gallery | Beit Sela, vacation rental in Efrat",
+      "he": "גלריה | בית סלע, וילה להשכרה באפרת"
+    },
+    "description": {
+      "en": "Photographs of the Efrat family home: kitchen, dining, bedrooms, baths, balcony, and the seasonal pool. Captions describe what is visible. Airbnb did not label the rooms.",
+      "he": "תמונות של הבית המשפחתי באפרת: מטבח, פינת אוכל, חדרי שינה, רחצה, מרפסת והבריכה העונתית. הכיתוב מתאר את מה שרואים. ב-Airbnb לא סומנו החדרים."
+    }
+  },
+  "heading": { "en": "The house, room by room, as far as the photos go.", "he": "הבית, חדר אחר חדר, עד כמה שהתמונות מראות." },
+  "intro": {
+    "en": [
+      "These 24 photographs were saved from the Airbnb listing. Airbnb did not supply captions. The titles here describe what is in the frame. They are not a confirmed map of bedroom 1 through bedroom 7.",
+      "If you are choosing a room for a grandparent or a child, use the sleeping list for the published bed types, and ask Aharon which photograph matches which room."
+    ],
+    "he": [
+      "24 התמונות האלה נשמרו מרשימת Airbnb. ב-Airbnb לא סופקו כיתובים. הכותרות כאן מתארות את מה שיש בפריים. הן אינן מפה מאושרת של חדר 1 עד חדר 7.",
+      "אם בוחרים חדר לסבא או לילד, כדאי להשתמש ברשימת המיטות שפורסמה, ולשאול את אהרן איזו תמונה שייכת לאיזה חדר."
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "seo": {
+    "title": {
+      "en": "Shabbat-friendly vacation rental near Jerusalem | Beit Sela, Efrat",
+      "he": "וילה לשבת ליד ירושלים | בית סלע באפרת"
+    },
+    "description": {
+      "en": "A Shabbat-friendly family vacation rental in Efrat, about 20 minutes from Jerusalem: kosher kitchen, hot plate, urn, large dining table, and nearby synagogues in a quiet neighborhood.",
+      "he": "אירוח משפחתי לשבת באפרת, כ-20 דקות מירושלים: מטבח כשר, פלטת שבת, מיחם, שולחן אוכל גדול ובתי כנסת בקרבת מקום, בשכונה שקטה."
+    }
+  },
+  "kicker": {
+    "en": "Family stay in Gush Etzion",
+    "he": "אירוח משפחתי בגוש עציון"
+  },
+  "heading": {
+    "en": "Shabbat in a house that already has the boring parts sorted.",
+    "he": "שבת בבית שבו החלקים המשעממים כבר מסודרים."
+  },
+  "intro": {
+    "en": [
+      "Beit Sela is a Shabbat-friendly vacation rental in Efrat, Gush Etzion, about 20 minutes from Jerusalem. Families use it for a family Shabbat, which is also what Yoav’s review describes.",
+      "Only the items below come from the listing. Anything a community usually posts on a bulletin — eruv, zmanim, which shul meets when — is not on the listing, and it is not invented here."
+    ],
+    "he": [
+      "בית סלע הוא אירוח ידידותי לשבת באפרת, גוש עציון, כעשרים דקות מירושלים. משפחות משתמשות בו לשבת משפחתית, וזה גם מה שמתואר בביקורת של יואב.",
+      "רק מה שמופיע למטה לקוח מהרשימה. מה שקהילה בדרך כלל תולה על לוח מודעות — עירוב, זמני היום, איזה בית כנסת ומתי — לא נמצא ברשימה, ולא הומצא כאן."
+    ]
+  },
+  "confirmed": {
+    "heading": { "en": "What the listing confirms", "he": "מה שהרשימה מאשרת" },
+    "items": [
+      {
+        "title": { "en": "Kosher kitchen", "he": "מטבח כשר" },
+        "body": {
+          "en": "The introduction calls the kitchen kosher. Guests may cook their own meals. No certification body, rabbi, or hechsher name is given.",
+          "he": "במבוא המטבח נקרא כשר. אורחים יכולים לבשל בעצמם. לא מצוינים גוף כשרות, רב או שם הכשר."
+        }
+      },
+      {
+        "title": { "en": "Hot plate and urn", "he": "פלטת שבת ומיחם" },
+        "body": {
+          "en": "Both are named in the listing’s Shabbat line: hot plate, and urn.",
+          "he": "שניהם מופיעים בשורת השבת של הרשימה: פלטה, ומיחם."
+        }
+      },
+      {
+        "title": { "en": "A table for the family", "he": "שולחן למשפחה" },
+        "body": {
+          "en": "A large dining area and a dining table are listed. The photograph shows a full table and chairs. We are not publishing a seat count the listing does not give.",
+          "he": "פינת אוכל גדולה ושולחן אוכל מופיעים ברשימה. בתמונה רואים שולחן מלא וכיסאות. אנחנו לא מפרסמים מספר מקומות שהרשימה לא נותנת."
+        }
+      },
+      {
+        "title": { "en": "Synagogues nearby", "he": "בתי כנסת בקרבת מקום" },
+        "body": {
+          "en": "The listing says nearby synagogues, in a quiet modern Orthodox neighborhood. It does not name them, give walking minutes, or print a schedule.",
+          "he": "הרשימה מציינת בתי כנסת בקרבת מקום, בשכונה אורתודוקסית מודרנית שקטה. היא לא מנקבת בשמות, לא נותנת דקות הליכה, ולא מדפיסה לוח זמנים."
+        }
+      },
+      {
+        "title": { "en": "A quiet street", "he": "רחוב שקט" },
+        "body": {
+          "en": "Quiet hours run from 11:00 PM to 7:00 AM. Parties and events are not allowed. That is a house rule, not a program of activities.",
+          "he": "שעות השקט הן מ-23:00 עד 7:00. מסיבות ואירועים אינם מותרים. זה כלל בית, לא לוח פעילויות."
+        }
+      }
+    ]
+  },
+  "notListed": {
+    "heading": { "en": "Not in the listing", "he": "לא מופיע ברשימה" },
+    "paragraphs": {
+      "en": [
+        "Eruv status, synagogue names, and service times are not stated. Kosher certification is not stated beyond the words “kosher kitchen.” Hot water and heating appear under Airbnb’s “Not included” list; confirm those before a winter Shabbat.",
+        "For a family Shabbat near Jerusalem, the practical next step is still Airbnb: check the dates, then message Aharon with the questions this page deliberately leaves open."
+      ],
+      "he": [
+        "סטטוס עירוב, שמות בתי כנסת וזמני תפילה לא מצוינים. הכשר לא מצוין מעבר למילים ״מטבח כשר״. מים חמים וחימום מופיעים אצל Airbnb תחת ״לא כלול״; כדאי לוודא אותם לפני שבת בחורף.",
+        "לשבת משפחתית ליד ירושלים, הצעד המעשי הבא הוא עדיין Airbnb: לבדוק תאריכים, ואז לכתוב לאהרן את השאלות שהעמוד הזה משאיר פתוחות בכוונה."
+      ]
+    }
+  }
+}
